@@ -14,20 +14,13 @@ struct FoodDetail: View {
     
     @State var count: Int = 1
     
-    var foodprice: () -> String
-    
-    init(martfood: Martfood) {
-        self.martfood = martfood
-        self.foodprice = {
-            let index = martfood.price.firstIndex(of: ",")!
-            var str = martfood.price
-            str.remove(at: index)
-            return str
-        }
-    }
+    @State var foodprice: String = ""
     
     var addcountButton: some View {
-        Button(action: { self.count += 1 }) {
+        Button(action: {
+            self.count += 1
+            self.setFoodPrice()
+        }) {
             ZStack {
                 Circle()
                     .frame(width: 30, height: 30)
@@ -43,6 +36,7 @@ struct FoodDetail: View {
         Button(action: {
             if self.count > 1 {
                 self.count -= 1
+                self.setFoodPrice()
             }
         }) {
             ZStack {
@@ -106,7 +100,7 @@ struct FoodDetail: View {
                             .foregroundColor(.gray)
                             .fontWeight(.bold)
                         
-                        Text("\(martfood.price) 원")
+                        Text("\(foodprice) 원")
                             .fontWeight(.medium)
                     }
                     Spacer()
@@ -116,13 +110,44 @@ struct FoodDetail: View {
                 .padding(.horizontal, 15)
             }
             .padding(.vertical, 20)
-            
         }
+        .onAppear {
+            self.foodprice = self.martfood.price
+        }
+    }
+    
+    func setFoodPrice() {
+        let index = martfood.price.firstIndex(of: ",")!
+        var price_str = martfood.price
+        price_str.remove(at: index)
+        
+        foodprice = String(Int(price_str)! * count)
+        
+        if foodprice.count == 4 {
+            foodprice.insert(",", at: foodprice.index(foodprice.startIndex, offsetBy: 1))
+        }
+        else if foodprice.count == 5 {
+            foodprice.insert(",", at: foodprice.index(foodprice.startIndex, offsetBy: 2))
+        }
+        else if foodprice.count == 6 {
+            foodprice.insert(",", at: foodprice.index(foodprice.startIndex, offsetBy: 3))
+        }
+        
+        /*
+         100 - 3
+         1,000 - 4
+         10,000 - 5
+         100,000 - 6
+         1,000,000 - 7
+         10,000,000 - 8
+         100,000,000 - 9
+         1,000,000,000 - 10
+        */
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodDetail(martfood: martfoodData[25])
+        FoodDetail(martfood: martfoodData[30])
     }
 }
