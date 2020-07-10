@@ -18,22 +18,20 @@ struct MartHome: View {
         NavigationView {
             ZStack {
                 Menu()
-                    .offset(x: self.menu ? -UIScreen.main.bounds.width * 2/5 : -UIScreen.main.bounds.width)
+                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
                 
-                if self.cart {
-                    VStack {
-                        MartTop(menu: self.$menu, cart: self.$cart)
-                        
-                        Text("카테고리")
-                        Spacer()
-                    }
-                }
-                else {
-                    FoodList(menu: self.$menu, cart: self.$cart)
-                        .offset(x: self.menu ? UIScreen.main.bounds.width * 3/5 : 0)
-                    
-                }
+                FoodList(menu: $menu, cart: $cart)
+                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .background(Color.white)
+                    .cornerRadius(self.menu ? 30 : 0)
+                    .offset(x: self.menu ? UIScreen.main.bounds.width / 2 : 0, y: self.menu ? 15 : 0)
+                    .scaleEffect(self.menu ? 0.9 : 1)
+                    .rotationEffect(.init(degrees: self.menu ? -5 : 0))
+                
             }
+            .background(Color("category").edgesIgnoringSafeArea(.all))
+            .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }
@@ -83,26 +81,6 @@ struct MartTop: View {
     }
 }
 
-struct Menu: View {
-    var body: some View {
-        ZStack {
-            Color("category")
-            
-            VStack(spacing: 20) {
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.white)
-                
-                Spacer()
-            }
-            .padding(.top, 70)
-            .padding(.leading, 20)
-        }
-        .edgesIgnoringSafeArea(.all)
-    }
-}
-
 struct FoodList: View {
     @Binding var menu: Bool
     
@@ -113,7 +91,7 @@ struct FoodList: View {
             MartTop(menu: $menu, cart: $cart)
             
             Text("list")
-            Spacer()
+            Spacer(minLength: 0)
         }
     }
 }

@@ -22,6 +22,7 @@
 		5D8DF43A24AC4EFE008C5C9A /* Neuromorphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43924AC4EFE008C5C9A /* Neuromorphic.swift */; };
 		5D8DF43C24AC7056008C5C9A /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43B24AC7056008C5C9A /* FoodList.swift */; };
 		5D8DF43E24AD7629008C5C9A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43D24AD7629008C5C9A /* UserData.swift */; };
+		5D96C9EF24B853DC004665DE /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96C9EE24B853DC004665DE /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5D8DF43924AC4EFE008C5C9A /* Neuromorphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuromorphic.swift; sourceTree = "<group>"; };
 		5D8DF43B24AC7056008C5C9A /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
 		5D8DF43D24AD7629008C5C9A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		5D96C9EE24B853DC004665DE /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				5D8DF3F624AC3371008C5C9A /* SceneDelegate.swift */,
 				5D8DF43B24AC7056008C5C9A /* FoodList.swift */,
 				5D8DF3FB24AC3371008C5C9A /* FoodDetail.swift */,
+				5D96C9EE24B853DC004665DE /* Menu.swift */,
 				5D8DF3FD24AC3374008C5C9A /* Assets.xcassets */,
 				5D8DF40224AC3374008C5C9A /* LaunchScreen.storyboard */,
 				5D8DF40524AC3374008C5C9A /* Info.plist */,
@@ -309,6 +312,7 @@
 				5D8DF43724AC3BCD008C5C9A /* Martfood.swift in Sources */,
 				5D8DF43524AC3A9E008C5C9A /* Data.swift in Sources */,
 				5D8DF43E24AD7629008C5C9A /* UserData.swift in Sources */,
+				5D96C9EF24B853DC004665DE /* Menu.swift in Sources */,
 				5D8DF3FA24AC3371008C5C9A /* MartView.xcdatamodeld in Sources */,
 				5D8DF43A24AC4EFE008C5C9A /* Neuromorphic.swift in Sources */,
 				5D8DF43C24AC7056008C5C9A /* FoodList.swift in Sources */,
