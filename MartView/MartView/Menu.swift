@@ -14,6 +14,10 @@ struct Menu: View {
     
     @State var catalogue = true
     
+    @Binding var menu: Bool
+    
+    @Binding var foodType: String
+    
     var body: some View {
         HStack {
             ScrollView(showsIndicators: false) {
@@ -52,7 +56,7 @@ struct Menu: View {
                     }
                     
                     if self.catalogue {
-                        Catalogue()
+                        Catalogue(menu: $menu, foodType: $foodType)
                         
                     }
                     
@@ -87,6 +91,7 @@ struct Menu: View {
             }
             Spacer(minLength: 0)
         }
+        .background(Color("category").edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -99,6 +104,10 @@ struct Catalogue: View {
     @State var vegetable = false
     
     @State var meat = false
+    
+    @Binding var menu: Bool
+    
+    @Binding var foodType: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -119,15 +128,30 @@ struct Catalogue: View {
             
             if fruit {
                 VStack(alignment: .leading, spacing: 15) {
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "사과"
+                            self.menu = false
+                        }
+                    }) {
                         Text("사과")
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "딸기 / 블루베리"
+                            self.menu = false
+                        }
+                    }) {
                         Text("딸기 / 블루베리")
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "감귤 / 한라봉"
+                            self.menu = false
+                        }
+                    }) {
                         Text("감귤 / 한라봉")
                     }
                 }
@@ -152,15 +176,30 @@ struct Catalogue: View {
             
             if vegetable {
                 VStack(alignment: .leading, spacing: 15) {
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "고구마 / 감자"
+                            self.menu = false
+                        }
+                    }) {
                         Text("고구마 / 감자")
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "상추 / 깻잎"
+                            self.menu = false
+                        }
+                    }) {
                         Text("상추 / 깻잎")
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "시금치 / 부추"
+                            self.menu = false
+                        }
+                    }) {
                         Text("시금치 / 부추")
                     }
                 }
@@ -185,15 +224,30 @@ struct Catalogue: View {
             
             if meat {
                 VStack(alignment: .leading, spacing: 15) {
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "소고기"
+                            self.menu = false
+                        }
+                    }) {
                         Text("소고기")
                     }
 
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "돼지고기"
+                            self.menu = false
+                        }
+                    }) {
                         Text("돼지고기")
                     }
 
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            self.foodType = "닭 / 오리고기"
+                            self.menu = false
+                        }
+                    }) {
                         Text("닭 / 오리고기")
                     }
                 }
@@ -209,6 +263,6 @@ struct Catalogue: View {
 
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
-        Menu()
+        Menu(menu: .constant(false), foodType: .constant("딸기 / 블루베리"))
     }
 }

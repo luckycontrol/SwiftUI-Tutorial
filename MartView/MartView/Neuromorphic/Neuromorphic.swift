@@ -18,8 +18,8 @@ struct FoodDetailModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .cornerRadius(15)
-            .shadow(color: Color.black.opacity(0.3), radius: 8, x: 1, y: 1)
-            .shadow(color: Color.white.opacity(0.3), radius: 8, x: -1, y: -1)
+            .shadow(color: Color.black.opacity(0.3), radius: 2, x: 1, y: 1)
+            .shadow(color: Color.white.opacity(0.3), radius: 2, x: -1, y: -1)
     }
 }
 

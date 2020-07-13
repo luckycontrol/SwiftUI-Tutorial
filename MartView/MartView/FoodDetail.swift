@@ -57,7 +57,7 @@ struct FoodDetail: View {
                 
                 HStack(spacing: 20) {
                     Image(systemName: "cart.fill")
-                    Text("구매")
+                    Text("장바구니 추가")
                         .fontWeight(.semibold)
                 }
                 .foregroundColor(.black)
@@ -96,7 +96,7 @@ struct FoodDetail: View {
                 
                 HStack {
                     VStack(alignment: .center, spacing: 5) {
-                        Text("Price")
+                        Text("가격")
                             .foregroundColor(.gray)
                             .fontWeight(.bold)
                         
