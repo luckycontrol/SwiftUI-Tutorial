@@ -91,6 +91,7 @@ struct Menu: View {
             }
             Spacer(minLength: 0)
         }
+        .edgesIgnoringSafeArea(.all)
         .background(Color("category").edgesIgnoringSafeArea(.all))
     }
 }

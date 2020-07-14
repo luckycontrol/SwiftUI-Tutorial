@@ -68,9 +68,7 @@ struct FoodDetail: View {
     }
     
     var body: some View {
-        ZStack {
-            Color("background").edgesIgnoringSafeArea(.all)
-            
+        ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 40) {
                 Text(martfood.name)
                     .fontWeight(.bold)
@@ -110,10 +108,11 @@ struct FoodDetail: View {
                 .padding(.horizontal, 15)
             }
             .padding(.vertical, 20)
+            .onAppear {
+                self.foodprice = self.martfood.price
+            }
         }
-        .onAppear {
-            self.foodprice = self.martfood.price
-        }
+        .background(Color("background").edgesIgnoringSafeArea(.all))
     }
     
     func setFoodPrice() {

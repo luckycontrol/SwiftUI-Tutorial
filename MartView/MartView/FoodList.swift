@@ -8,62 +8,6 @@
 
 import SwiftUI
 
-struct MartHome: View {
-    
-    @State var menu: Bool = false
-    
-    @State var cart: Bool = false
-    
-    @State var foodType: String = "딸기 / 블루베리"
-    
-    @State private var offset = CGSize.zero
-    
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Menu(menu: $menu, foodType: $foodType)
-                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                    .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
-                
-                FoodList(menu: $menu, cart: $cart, foodType: $foodType)
-                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                    .background(Color.white)
-                    .cornerRadius(self.menu ? 30 : 0)
-                    .offset(x: self.menu ? UIScreen.main.bounds.width / 2 : self.offset.width, y: self.menu ? 15 : self.offset.height)
-                    .scaleEffect(self.menu ? 0.9 : 1)
-                    .rotationEffect(.init(degrees: self.menu ? -5 : 0))
-                    .gesture(
-                        DragGesture()
-                            .onChanged({ gesture in
-                                self.offset = gesture.translation
-                                if self.offset.height < 0 || self.offset.height > 0 {
-                                    self.offset.height = 0
-                                }
-                                if self.offset.width < 0 {
-                                    self.offset.width = 0
-                                }
-                                print("width: \(self.offset.width)")
-                                print("height: \(self.offset.height)")
-                            })
-                            .onEnded({ _ in
-                                if self.offset.width >= 150 {
-                                    withAnimation {
-                                        self.offset.width = 0
-                                        self.menu = true
-                                    }
-                                }
-                            })
-                    )
-                
-            }
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-        }
-    
-    }
-}
-
 struct MartTop: View {
     
     @Binding var menu: Bool
@@ -78,17 +22,17 @@ struct MartTop: View {
                     self.cart = false
                 }
             }) {
-                Image(systemName: "list.bullet.indent")
+                Image(systemName: "list.bullet")
                     .resizable()
                     .renderingMode(.original)
-                    .frame(width: 25, height: 20)
+                    .frame(width: 20, height: 20)
             }
             
             Spacer()
             
             Text("Cho Mart")
                 .fontWeight(.bold)
-                .font(.system(size: 22))
+                .font(.system(size: 18))
             
             Spacer()
             
@@ -99,10 +43,9 @@ struct MartTop: View {
                 Image(systemName: "cart")
                     .resizable()
                     .renderingMode(.original)
-                    .frame(width: 25, height: 25)
+                    .frame(width: 20, height: 20)
             }
         }
-        .padding([.top, .bottom], 15)
         .padding(.horizontal, 30)
         .background(Color.white)
     }
@@ -118,6 +61,7 @@ struct FoodList: View {
     var body: some View {
         VStack {
             MartTop(menu: $menu, cart: $cart)
+                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
             
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(martfoodData, id: \.self) { food in
@@ -128,36 +72,37 @@ struct FoodList: View {
                                     Image(food.name)
                                         .renderingMode(.original)
                                         .resizable()
-                                        .frame(width: 350, height: 350)
+                                        .frame(width: 300, height: 300)
                                     
-                                    Text("\(food.name)")
-                                        .foregroundColor(.black)
+                                    Text(food.name)
                                         .font(.headline)
-                                        .padding(.top, 10)
-                                        .padding(.leading, 10)
+                                        .foregroundColor(.black)
+                                        .padding(.leading, 5)
                                     
-                                    Text("\(food.price) 원")
+                                    Text(food.price + " 원")
+                                        .font(.subheadline)
                                         .foregroundColor(.black)
-                                        .font(.headline)
-                                        .padding(.bottom, 10)
-                                        .padding(.leading, 10)
+                                        .padding(.leading, 5)
+                                        .padding(.bottom)
                                 }
                                 .background(Color.white)
-                                .cornerRadius(8)
+                                .cornerRadius(15)
                                 .shadow(color: Color.gray, radius: 2, x: 1, y: 1)
+                                .padding(.vertical, 12)
                             }
                         }
                     }
-                    .padding(.vertical, 10)
                 }
             }
+            .frame(width: UIScreen.main.bounds.size.width)
+            .background(Color("background"))
         }
-        .background(Color("background"))
+        .background(Color.white.edgesIgnoringSafeArea(.all))
     }
 }
 
 struct FoodList_Previews: PreviewProvider {
     static var previews: some View {
-        MartHome()
+        FoodList(menu: .constant(false), cart: .constant(false), foodType: .constant("돼지고기"))
     }
 }
