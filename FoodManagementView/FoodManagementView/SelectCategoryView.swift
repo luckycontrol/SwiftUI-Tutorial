@@ -33,12 +33,15 @@ struct SelectCategoryView: View {
                                 self.getFoodTypeCount(foodType)
                             }
                         }) {
-                            Text(foodType)
+                            HStack {
+                                Text(foodType)
                                 .foregroundColor(foodType == self.selectedFoodType ? .white : .black)
+                                .fontWeight(foodType == self.selectedFoodType ? .bold : .none)
+                            }
+                            .frame(width: 100, height: 30)
+                            .background(foodType == self.selectedFoodType ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.15))
+                            .cornerRadius(15)
                         }
-                        .frame(width: 100, height: 30)
-                        .background(foodType == self.selectedFoodType ? Color("foodcategory").opacity(0.8) : .clear)
-                        .cornerRadius(15)
                     }
                 }
             }.padding(.bottom, 15)
@@ -59,7 +62,9 @@ struct SelectCategoryView: View {
                 }
             }
         }
-        .padding(.horizontal, 15)
+        .padding([.vertical, .horizontal], 15)
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(20)
         .accentColor(.black)
     }
     

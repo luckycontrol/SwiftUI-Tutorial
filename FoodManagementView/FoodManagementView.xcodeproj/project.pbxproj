@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D569B6424BF1D20008BE082 /* FoodTypeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569B6324BF1D20008BE082 /* FoodTypeImageView.swift */; };
+		5D569B6624BF497F008BE082 /* AppendCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D569B6524BF497F008BE082 /* AppendCategoryView.swift */; };
 		5D96CA0124BD8EBB004665DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0024BD8EBB004665DE /* AppDelegate.swift */; };
 		5D96CA0324BD8EBB004665DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0224BD8EBB004665DE /* SceneDelegate.swift */; };
 		5D96CA0624BD8EBB004665DE /* FoodManagementView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0424BD8EBB004665DE /* FoodManagementView.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		5D569B6324BF1D20008BE082 /* FoodTypeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeImageView.swift; sourceTree = "<group>"; };
+		5D569B6524BF497F008BE082 /* AppendCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendCategoryView.swift; sourceTree = "<group>"; };
 		5D96C9FD24BD8EBB004665DE /* FoodManagementView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodManagementView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D96CA0024BD8EBB004665DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D96CA0224BD8EBB004665DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				5D96CA0224BD8EBB004665DE /* SceneDelegate.swift */,
 				5D96CA0724BD8EBB004665DE /* ContentView.swift */,
 				5D96CA3324BDE7CD004665DE /* SelfAppendView.swift */,
+				5D569B6524BF497F008BE082 /* AppendCategoryView.swift */,
 				5D96CA3D24BE1C97004665DE /* SelectCategoryView.swift */,
 				5D569B6324BF1D20008BE082 /* FoodTypeImageView.swift */,
 				5D96CA0924BD8EC0004665DE /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D569B6624BF497F008BE082 /* AppendCategoryView.swift in Sources */,
 				5D96CA3424BDE7CD004665DE /* SelfAppendView.swift in Sources */,
 				5D96CA0624BD8EBB004665DE /* FoodManagementView.xcdatamodeld in Sources */,
 				5D96CA0124BD8EBB004665DE /* AppDelegate.swift in Sources */,
