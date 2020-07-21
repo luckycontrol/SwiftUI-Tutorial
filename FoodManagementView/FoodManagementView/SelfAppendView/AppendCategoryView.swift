@@ -9,13 +9,21 @@
 import SwiftUI
 
 struct AppendCategoryView: View {
+    
+    @Binding var directAppend: Bool
+    
     var body: some View {
         VStack {
             Text("")
             
             Spacer()
+            
             HStack {
-                Button(action: {}) {
+                Button(action: {
+                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
+                        self.directAppend = true
+                    }
+                }) {
                     Text("직접 추가")
                         .foregroundColor(.white)
                 }
@@ -28,15 +36,15 @@ struct AppendCategoryView: View {
             }
             .padding()
         }
-        .frame(width: UIScreen.main.bounds.width, height: 300)
-        .background(Color.gray.opacity(0.2))
-        .cornerRadius(20)
+        .frame(width: UIScreen.main.bounds.width, height: 250)
+        .background(Color.gray.opacity(0.15))
+        .cornerRadius(15)
         .accentColor(.black)
     }
 }
 
 struct AppendCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        AppendCategoryView()
+        AppendCategoryView(directAppend: .constant(false))
     }
 }

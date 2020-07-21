@@ -14,3 +14,8 @@ struct FoodCategory: Hashable, Codable, Identifiable {
     var foodType: String
     var foodname: String
 }
+
+struct SelectedFood: Hashable {
+    var foodType: String
+    var foodname: String
+}
