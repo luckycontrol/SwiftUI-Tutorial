@@ -35,6 +35,7 @@ struct SelectCategoryScrollView: View {
                         .frame(width: 100, height: 30)
                         .background(self.selectedFoodType == "과일" ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.2))
                         .cornerRadius(15)
+                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 }
                 
                 Button(action: {
@@ -49,6 +50,7 @@ struct SelectCategoryScrollView: View {
                         .frame(width: 100, height: 30)
                         .background(self.selectedFoodType == "채소" ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.2))
                         .cornerRadius(15)
+                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 }
                 
                 Button(action: {
@@ -63,6 +65,7 @@ struct SelectCategoryScrollView: View {
                         .frame(width: 100, height: 30)
                         .background(self.selectedFoodType == "정육" ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.2))
                         .cornerRadius(15)
+                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 }
                 
                 Button(action: {
@@ -77,6 +80,7 @@ struct SelectCategoryScrollView: View {
                         .frame(width: 100, height: 30)
                         .background(self.selectedFoodType == "유제품" ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.2))
                         .cornerRadius(15)
+                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 }
                 
                 Button(action: {
@@ -91,9 +95,10 @@ struct SelectCategoryScrollView: View {
                         .frame(width: 100, height: 30)
                         .background(self.selectedFoodType == "해산물" ? Color("foodcategory").opacity(0.8) : Color.gray.opacity(0.2))
                         .cornerRadius(15)
+                        .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 }
             }
-            .padding(.horizontal)
+            .padding([.horizontal, .vertical])
         }
     }
     

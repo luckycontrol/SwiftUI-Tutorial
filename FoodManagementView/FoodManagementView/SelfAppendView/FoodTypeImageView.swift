@@ -10,13 +10,13 @@ import SwiftUI
 
 struct FoodTypeImageView: View {
     
-    var foodType: FoodCategory
+    let foodType: FoodCategory
     
     @State var location: CGSize = .zero
     
-    @Binding var food: SelectedFood
-    
     @Binding var normalAppend: Bool
+    
+    @EnvironmentObject var selfData: SelfAppendData
     
     var body: some View {
         VStack {
@@ -43,8 +43,7 @@ struct FoodTypeImageView: View {
                                     self.location = .zero
                                 }
                             } else {
-                                self.food.foodname = self.foodType.foodname
-                                self.food.foodType = self.foodType.foodType
+                                self.selfData.food = SelectedFood(foodType: self.foodType.foodType, foodname: self.foodType.foodname)
                                 
                                 withAnimation {
                                     self.normalAppend = true
@@ -63,6 +62,6 @@ struct FoodTypeImageView: View {
 
 struct FoodTypeImageView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodTypeImageView(foodType: foodcategory[0], food: .constant(SelectedFood(foodType: "", foodname: "")), normalAppend: .constant(false))
+        FoodTypeImageView(foodType: foodcategory[0], normalAppend: .constant(false))
     }
 }

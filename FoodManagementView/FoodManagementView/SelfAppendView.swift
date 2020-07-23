@@ -14,16 +14,14 @@ struct SelfAppendView: View {
     
     @State var normalAppend = false
     
-    @State var food: SelectedFood = SelectedFood(foodType: "", foodname: "")
-    
     var body: some View {
         ZStack {
             
-            SelfAppendViewDetail(food: $food, directAppend: $directAppend, normalAppend: $normalAppend)
+            SelfAppendViewDetail(directAppend: $directAppend, normalAppend: $normalAppend)
         
             SelfAppendViewDirect(directAppend: $directAppend)
             
-            SelfAppendViewNormal(food: food, normalAppend: $normalAppend)
+            SelfAppendViewNormal(normalAppend: $normalAppend)
         }
          
     }

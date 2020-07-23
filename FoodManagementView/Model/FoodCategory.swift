@@ -19,3 +19,14 @@ struct SelectedFood: Hashable {
     var foodType: String
     var foodname: String
 }
+
+struct Selected {
+    var foodname: String
+    var foodType: String
+    var expiration: Date
+}
+
+class SelfAppendData: ObservableObject {
+    @Published var selectedFoodList: [SelectedFood] = []
+    @Published var food: SelectedFood = SelectedFood(foodType: "", foodname: "")
+}

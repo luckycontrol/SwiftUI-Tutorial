@@ -10,17 +10,32 @@ import SwiftUI
 
 struct SelfAppendViewNormal: View {
     
-    let food: SelectedFood
-    
     @Binding var normalAppend: Bool
+    
+    @EnvironmentObject var selfData: SelfAppendData
     
     @State var expirationDate: Date = Date()
     
-    @State var location: CGSize = .zero
-    
     var body: some View {
         ZStack {
+            Color(.white)
+            
             VStack(spacing: 20) {
+                
+                HStack {
+                    Button(action: {
+                        withAnimation {
+                            self.normalAppend = false
+                        }
+                    }) {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                }.padding(.vertical)
+                
                 HStack {
                     Text("식자재 추가")
                         .font(.largeTitle)
@@ -31,18 +46,21 @@ struct SelfAppendViewNormal: View {
                 
                 VStack {
                     HStack {
-                        Image(food.foodname)
+                        Image(self.selfData.food.foodname)
                             .resizable()
-                            .frame(width: 70, height: 70)
+                            .frame(width: 80, height: 80)
                             .clipShape(Circle())
                             .shadow(color: .gray, radius: 1, x: 1, y: 1)
                         
-                        VStack(spacing: 15) {
-                            Text("식자재 이름: \(food.foodname)")
+                        VStack(alignment: .leading, spacing: 15) {
+                            Text("식자재 이름: \(self.selfData.food.foodname)")
+                                .fontWeight(.semibold)
                             
-                            Text("식자재 분류: \(food.foodType)")
+                            Text("식자재 분류: \(self.selfData.food.foodType)")
+                                .fontWeight(.semibold)
                         }
                         .padding(.leading, 30)
+                        
                         Spacer()
                     }
                     .padding(.bottom, 60)
@@ -51,11 +69,8 @@ struct SelfAppendViewNormal: View {
                         .font(.title)
                         .fontWeight(.bold)
                     
-                    DatePicker(selection: $expirationDate, in: Date()..., displayedComponents: .date) {
-                        Text("")
-                    }.labelsHidden()
-                    .clipShape(Rectangle())
-                    .cornerRadius(15)
+                    DatePicker("", selection: $expirationDate, in: Date()..., displayedComponents: .date)
+                    .labelsHidden()
                 }
                 
                 Spacer()
@@ -70,39 +85,18 @@ struct SelfAppendViewNormal: View {
                     .background(Color("foodcategory").opacity(0.7))
                     .cornerRadius(15)
                     .shadow(color: .gray, radius: 1, x: 1, y: 1)
-                }
-                .padding(.bottom, 15)
+                }.padding(.bottom)
             }
-            .padding(.horizontal)
+            .padding([.horizontal, .vertical])
             .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
         }
-        .background(Color.white)
-        .offset(y: self.normalAppend ? self.location.height : UIScreen.main.bounds.height)
-        .gesture(DragGesture()
-            .onChanged { value in
-                if value.translation.height > 0 {
-                    self.location.height = value.translation.height
-                }
-            }
-            
-            .onEnded { value in
-                if self.location.height >= 200 {
-                    withAnimation {
-                        self.location = .zero
-                        self.normalAppend = false
-                    }
-                } else {
-                    withAnimation {
-                        self.location = .zero
-                    }
-                }
-            }
-        )
+        .edgesIgnoringSafeArea(.all)
+        .offset(y: self.normalAppend ? 0 : UIScreen.main.bounds.height)
     }
 }
 
 struct SelfAppendViewNormal_Previews: PreviewProvider {
     static var previews: some View {
-        SelfAppendViewNormal(food: SelectedFood(foodType: "", foodname: ""), normalAppend: .constant(false))
+        SelfAppendViewNormal(normalAppend: .constant(false))
     }
 }

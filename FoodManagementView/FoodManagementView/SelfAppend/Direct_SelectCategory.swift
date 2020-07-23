@@ -18,6 +18,7 @@ struct Direct_SelectCategory: View {
         VStack(alignment: .leading) {
             Text("식자재 종류")
                 .font(.title)
+                .fontWeight(.bold)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -36,14 +37,14 @@ struct Direct_SelectCategory: View {
                                     Image(self.foodcategory == category ? category + "선택" : category)
                                         .renderingMode(.original)
                                         .resizable()
-                                        .frame(width: 60, height: 60)
+                                        .frame(width: 50, height: 50)
                                     
                                     Text(category)
                                 }
                             }
                         }
                     }
-                }.padding([.horizontal, .vertical], 15)
+                }.padding(.vertical, 15)
             }
         }
     }

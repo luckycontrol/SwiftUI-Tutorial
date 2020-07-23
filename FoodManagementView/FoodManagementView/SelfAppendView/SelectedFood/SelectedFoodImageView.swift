@@ -9,6 +9,11 @@
 import SwiftUI
 
 struct SelectedFoodImageView: View {
+    
+    @Binding var selectedFoodList: [SelectedFood]
+    
+    
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -16,6 +21,6 @@ struct SelectedFoodImageView: View {
 
 struct SelectedFoodImageView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedFoodImageView()
+        SelectedFoodImageView(selectedFoodList: .constant([]))
     }
 }
