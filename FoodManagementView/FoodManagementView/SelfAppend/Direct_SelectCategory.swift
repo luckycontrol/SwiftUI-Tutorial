@@ -19,6 +19,7 @@ struct Direct_SelectCategory: View {
             Text("식자재 종류")
                 .font(.title)
                 .fontWeight(.bold)
+                .padding(.leading)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -44,7 +45,9 @@ struct Direct_SelectCategory: View {
                             }
                         }
                     }
-                }.padding(.vertical, 15)
+                }
+                .padding(.vertical, 15)
+                .padding(.horizontal)
             }
         }
     }

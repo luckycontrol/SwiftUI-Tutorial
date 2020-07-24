@@ -21,12 +21,14 @@ struct SelectedFood: Hashable {
 }
 
 struct Selected {
+    var image: Image
     var foodname: String
     var foodType: String
     var expiration: Date
 }
 
-class SelfAppendData: ObservableObject {
-    @Published var selectedFoodList: [SelectedFood] = []
+class ViewData: ObservableObject {
+    @Published var selectedFoodList: [Selected] = []
     @Published var food: SelectedFood = SelectedFood(foodType: "", foodname: "")
+    @Published var selectedMove = false
 }

@@ -23,7 +23,6 @@ struct SelfAppendView: View {
             
             SelfAppendViewNormal(normalAppend: $normalAppend)
         }
-         
     }
 }
 

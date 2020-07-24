@@ -16,7 +16,7 @@ struct FoodTypeImageView: View {
     
     @Binding var normalAppend: Bool
     
-    @EnvironmentObject var selfData: SelfAppendData
+    @EnvironmentObject var viewData: ViewData
     
     var body: some View {
         VStack {
@@ -43,7 +43,7 @@ struct FoodTypeImageView: View {
                                     self.location = .zero
                                 }
                             } else {
-                                self.selfData.food = SelectedFood(foodType: self.foodType.foodType, foodname: self.foodType.foodname)
+                                self.viewData.food = SelectedFood(foodType: self.foodType.foodType, foodname: self.foodType.foodname)
                                 
                                 withAnimation {
                                     self.normalAppend = true
@@ -62,6 +62,6 @@ struct FoodTypeImageView: View {
 
 struct FoodTypeImageView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodTypeImageView(foodType: foodcategory[0], normalAppend: .constant(false))
+        FoodTypeImageView(foodType: foodcategory[2], normalAppend: .constant(false))
     }
 }

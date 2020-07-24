@@ -31,6 +31,7 @@
 		5D96CA3924BE0481004665DE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3824BE0481004665DE /* Data.swift */; };
 		5D96CA3B24BE05DC004665DE /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3A24BE05DC004665DE /* FoodCategory.swift */; };
 		5D96CA3E24BE1C97004665DE /* SelfAppendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3D24BE1C97004665DE /* SelfAppendView.swift */; };
+		5DE49BF324CAC9D700F83403 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE49BF224CAC9D700F83403 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		5D96CA3824BE0481004665DE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5D96CA3A24BE05DC004665DE /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		5D96CA3D24BE1C97004665DE /* SelfAppendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAppendView.swift; sourceTree = "<group>"; };
+		5DE49BF224CAC9D700F83403 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				5D96CA3624BE045F004665DE /* SelfAppendDataSet.json */,
 				5D96CA3824BE0481004665DE /* Data.swift */,
 				5D96CA3A24BE05DC004665DE /* FoodCategory.swift */,
+				5DE49BF224CAC9D700F83403 /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				5D96CA0624BD8EBB004665DE /* FoodManagementView.xcdatamodeld in Sources */,
 				5D96CA0124BD8EBB004665DE /* AppDelegate.swift in Sources */,
 				5D6BE74D24C6A688009BAF6D /* SelfAppendViewDirect.swift in Sources */,
+				5DE49BF324CAC9D700F83403 /* ImagePicker.swift in Sources */,
 				5D96CA0824BD8EBB004665DE /* FoodManagement.swift in Sources */,
 				5D96CA3E24BE1C97004665DE /* SelfAppendView.swift in Sources */,
 				5D569B6424BF1D20008BE082 /* FoodTypeImageView.swift in Sources */,

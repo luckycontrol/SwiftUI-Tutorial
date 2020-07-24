@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct SelectedFoodImageList: View {
+    
+    @EnvironmentObject var viewData: ViewData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("")
+        }
     }
 }
 
