@@ -14,8 +14,22 @@ struct SelectedFoodImageList: View {
     
     var body: some View {
         VStack {
-            Text("")
-        }
+            if self.viewData.selectedFoodList.count != 0 {
+                ForEach(0...self.viewData.selectedRow!, id: \.self) { row in
+                    HStack {
+                        if row == self.viewData.selectedRow {
+                            ForEach(row * 5..<row * 5 + self.viewData.selectedCol!, id: \.self) { col in
+                                SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
+                            }
+                        } else {
+                            ForEach(row * 5..<row * 5 + 5, id: \.self) { col in
+                                SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
+                            }
+                        }
+                    }
+                }
+            }
+        }.padding()
     }
 }
 

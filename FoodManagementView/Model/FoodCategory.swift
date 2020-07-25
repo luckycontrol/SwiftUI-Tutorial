@@ -31,4 +31,6 @@ class ViewData: ObservableObject {
     @Published var selectedFoodList: [Selected] = []
     @Published var food: SelectedFood = SelectedFood(foodType: "", foodname: "")
     @Published var selectedMove = false
+    @Published var selectedRow: Int?
+    @Published var selectedCol: Int?
 }

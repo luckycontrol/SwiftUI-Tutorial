@@ -64,6 +64,7 @@ struct SelfAppendViewDirect: View {
                     /* 나가기 버튼 */
                     HStack {
                         Button(action: {
+                            self.resetInfo()
                             withAnimation {
                                 self.directAppend = false
                             }
@@ -155,6 +156,15 @@ struct SelfAppendViewDirect: View {
         foodImage = Image(uiImage: fooduiImage)
     }
     
+    func resetInfo() {
+        self.foodname = ""
+        self.foodcategory = ""
+        self.expiration = Date()
+        
+        self.foodImage = nil
+        self.fooduiImage = nil
+    }
+    
     func checkInputInfo() {
         if foodImage == nil {
             self.errText = "식자재 이미지를 선택해주세요"
@@ -175,6 +185,11 @@ struct SelfAppendViewDirect: View {
         }
         
         self.viewData.selectedFoodList.append(Selected(image: self.foodImage!, foodname: self.foodname, foodType: self.foodcategory, expiration: self.expiration))
+        
+        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 5
+        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 5
+        
+        resetInfo()
         
         withAnimation {
             self.directAppend = false

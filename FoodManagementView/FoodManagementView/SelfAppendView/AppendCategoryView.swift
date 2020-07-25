@@ -13,30 +13,32 @@ struct AppendCategoryView: View {
     @Binding var directAppend: Bool
     
     var body: some View {
-        VStack {
-            Text("")
-            
-            Spacer()
-            
-            HStack {
-                Button(action: {
-                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
-                        self.directAppend = true
-                    }
-                }) {
-                    Text("직접 추가")
-                        .foregroundColor(.white)
-                }
-                .frame(width: 100, height: 40)
-                .background(Color("foodcategory").opacity(0.8))
-                .cornerRadius(15)
-                .shadow(color: .gray, radius: 1, x: 1, y: 1)
+        ScrollView {
+            VStack {
+                SelectedFoodImageList()
                 
                 Spacer()
+                
+                HStack {
+                    Button(action: {
+                        withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
+                            self.directAppend = true
+                        }
+                    }) {
+                        Text("직접 추가")
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 100, height: 40)
+                    .background(Color("foodcategory").opacity(0.8))
+                    .cornerRadius(15)
+                    .shadow(color: .gray, radius: 1, x: 1, y: 1)
+                    
+                    Spacer()
+                }
+                .padding()
             }
-            .padding()
         }
-        .frame(width: UIScreen.main.bounds.width, height: 250)
+        .frame(height: 250)
         .background(Color.gray.opacity(0.15))
         .cornerRadius(15)
         .accentColor(.black)

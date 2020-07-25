@@ -77,7 +77,7 @@ struct SelfAppendViewNormal: View {
                     Spacer()
                     
                     Button(action: {
-                        self.viewData.selectedFoodList.append(Selected(image: Image(self.viewData.food.foodname), foodname: self.viewData.food.foodname, foodType: self.viewData.food.foodType, expiration: self.expirationDate))
+                        self.appendSelectedFood()
                         
                         withAnimation {
                             self.normalAppend = false
@@ -100,6 +100,15 @@ struct SelfAppendViewNormal: View {
         }
         .edgesIgnoringSafeArea(.all)
         .offset(y: self.normalAppend ? 0 : UIScreen.main.bounds.height)
+    }
+    
+    func appendSelectedFood() {
+        self.viewData.selectedFoodList.append(Selected(image: Image(self.viewData.food.foodname), foodname: self.viewData.food.foodname, foodType: self.viewData.food.foodType, expiration: self.expirationDate))
+        
+        print(self.viewData.selectedFoodList.count)
+        
+        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 5
+        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 5
     }
 }
 
