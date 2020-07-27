@@ -107,8 +107,8 @@ struct SelfAppendViewNormal: View {
         
         print(self.viewData.selectedFoodList.count)
         
-        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 5
-        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 5
+        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 3
+        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 3
     }
 }
 

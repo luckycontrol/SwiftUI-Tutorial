@@ -1,8 +1,8 @@
 //
-//  ImagePicker.swift
-//  ImportingImagePractice
+//  UsingCamera.swift
+//  UsingCameraRollPractice
 //
-//  Created by 조종운 on 2020/07/23.
+//  Created by 조종운 on 2020/07/27.
 //  Copyright © 2020 조종운. All rights reserved.
 //
 
@@ -14,13 +14,16 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var uiImage: UIImage?
     
-    func makeCoordinator() -> Coordinate {
-        Coordinate(self)
+    @Binding var sourceType: UIImagePickerController.SourceType?
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
+        picker.sourceType = sourceType!
         return picker
     }
     
@@ -28,7 +31,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
     }
     
-    class Coordinate: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: ImagePicker
         
         init(_ parent: ImagePicker) {

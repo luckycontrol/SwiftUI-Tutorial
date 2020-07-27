@@ -10,31 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var imagePicker = false
-    
-    @State private var inputImage: UIImage?
-    
     @State var image: Image?
+    
+    @State var uiImage: UIImage?
+    
+    @State var ImagePicking = false
     
     var body: some View {
         VStack {
             
             image?
                 .resizable()
-                .frame(width: 300, height: 300)
+                .frame(width: 100, height: 100)
             
-            Button(action: { self.imagePicker = true }) {
-                Text("Select Any Photo")
+            Button(action: {
+                self.ImagePicking = true
+            }) {
+                Text("Select Image")
             }
-        }
-        .sheet(isPresented: $imagePicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage)
+            .sheet(isPresented: $ImagePicking, onDismiss: loadImage) {
+                ImagePicker(uiImage: self.$uiImage)
+            }
         }
     }
     
     func loadImage() {
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
+        guard let uiImage = uiImage else { return }
+        image = Image(uiImage: uiImage)
     }
 }
 

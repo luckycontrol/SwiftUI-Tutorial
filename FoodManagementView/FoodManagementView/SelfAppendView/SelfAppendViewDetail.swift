@@ -26,8 +26,6 @@ struct SelfAppendViewDetail: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            Color(.white)
-            
             VStack {
                 HStack {
                     Text("식자재 추가")
@@ -38,6 +36,7 @@ struct SelfAppendViewDetail: View {
                     Spacer()
                 }
                 
+                /* 저장할 식자재 나열을 위한 뷰 */
                 AppendCategoryView(directAppend: $directAppend)
                 
                 HStack {
@@ -49,12 +48,15 @@ struct SelfAppendViewDetail: View {
                     Spacer()
                 }
                 
+                /* 식자재 타입 선택을 위한 가로 스크롤 뷰 */
                 SelectCategoryScrollView(selectedFoodType: $selectedFoodType, selectedFoodTypeList: $selectedFoodTypeList, selectedFoodTypeCount: $selectedFoodTypeCount, selectedFoodTypeLeft: $selectedFoodTypeLeft)
                 
+                /* 식자재 이미지 리스트 */
                 FoodTypeImageList(selectedFoodTypeList: $selectedFoodTypeList, selectedFoodTypeCount: $selectedFoodTypeCount, selectedFoodTypeLeft: $selectedFoodTypeLeft, normalAppend: $normalAppend)
                 
                 Spacer()
                 
+                /* 추가한 식자재 저장 버튼 */
                 Button(action: {}) {
                     HStack {
                         Text("식자재 추가")

@@ -33,10 +33,11 @@ struct SelectedFoodImageView: View {
                     }
                     .onEnded { value in
                         self.viewData.selectedMove = false
-                        self.location = .zero
+                        withAnimation {
+                            self.location = .zero
+                        }
                     }
             )
-            
             Text(selected.foodname)
         }
     }

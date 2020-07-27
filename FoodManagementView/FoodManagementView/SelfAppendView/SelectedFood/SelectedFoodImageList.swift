@@ -13,23 +13,28 @@ struct SelectedFoodImageList: View {
     @EnvironmentObject var viewData: ViewData
     
     var body: some View {
-        VStack {
-            if self.viewData.selectedFoodList.count != 0 {
-                ForEach(0...self.viewData.selectedRow!, id: \.self) { row in
-                    HStack {
-                        if row == self.viewData.selectedRow {
-                            ForEach(row * 5..<row * 5 + self.viewData.selectedCol!, id: \.self) { col in
-                                SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
+        ScrollView(.horizontal, showsIndicators: true) {
+            HStack(spacing: 15) {
+                if self.viewData.selectedFoodList.count != 0 {
+                    ForEach(0...self.viewData.selectedRow!, id: \.self) { row in
+                        VStack {
+                            if row == self.viewData.selectedRow {
+                                ForEach(row * 3..<row * 3 + self.viewData.selectedCol!, id: \.self) { col in
+                                    SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
+                                }
+                            } else {
+                                ForEach(row * 3..<row * 3 + 3, id: \.self) { col in
+                                    SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
+                                }
                             }
-                        } else {
-                            ForEach(row * 5..<row * 5 + 5, id: \.self) { col in
-                                SelectedFoodImageView(selected: self.viewData.selectedFoodList[col])
-                            }
+                            Spacer()
                         }
                     }
                 }
+                Spacer()
             }
-        }.padding()
+            .padding(15)
+        }
     }
 }
 

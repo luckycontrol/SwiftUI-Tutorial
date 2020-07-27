@@ -186,8 +186,8 @@ struct SelfAppendViewDirect: View {
         
         self.viewData.selectedFoodList.append(Selected(image: self.foodImage!, foodname: self.foodname, foodType: self.foodcategory, expiration: self.expiration))
         
-        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 5
-        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 5
+        self.viewData.selectedRow = self.viewData.selectedFoodList.count / 3
+        self.viewData.selectedCol = self.viewData.selectedFoodList.count % 3
         
         resetInfo()
         

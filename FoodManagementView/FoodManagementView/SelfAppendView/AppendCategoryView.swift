@@ -13,13 +13,14 @@ struct AppendCategoryView: View {
     @Binding var directAppend: Bool
     
     var body: some View {
-        ScrollView {
-            VStack {
-                SelectedFoodImageList()
-                
-                Spacer()
-                
-                HStack {
+        ZStack {
+            
+            SelectedFoodImageList()
+            
+            HStack {
+                VStack {
+                    Spacer()
+                    
                     Button(action: {
                         withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
                             self.directAppend = true
@@ -32,16 +33,15 @@ struct AppendCategoryView: View {
                     .background(Color("foodcategory").opacity(0.8))
                     .cornerRadius(15)
                     .shadow(color: .gray, radius: 1, x: 1, y: 1)
-                    
-                    Spacer()
+                    .padding(30)
                 }
-                .padding()
+                Spacer()
             }
         }
-        .frame(height: 250)
+        .frame(width: UIScreen.main.bounds.width, height: 350)
         .background(Color.gray.opacity(0.15))
         .cornerRadius(15)
-        .accentColor(.black)
+        .shadow(color: .gray, radius: 1, x: 1, y: 1)
     }
 }
 
