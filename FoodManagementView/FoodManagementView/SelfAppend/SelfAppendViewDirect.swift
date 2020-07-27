@@ -35,12 +35,12 @@ struct SelfAppendViewDirect: View {
     
     @State var showingImagePicker = false
     
-    @State var usingCamera = false
+    @State var sourceType: UIImagePickerController.SourceType?
     
     var cameraActionSheet: ActionSheet {
         ActionSheet(title: Text("이미지 설정"), message: Text("식자재 사진을 어떻게 추가하실건가요?"), buttons: [
-            .default(Text("사진첩에서 가져오기"), action: { self.showingImagePicker = true }),
-            .default(Text("직접 촬영하기"), action: { self.usingCamera = true }),
+            .default(Text("사진첩에서 가져오기"), action: { self.showingImagePicker = true; self.sourceType = .photoLibrary }),
+            .default(Text("직접 촬영하기"), action: { self.showingImagePicker = true; self.sourceType = .camera }),
             .cancel(Text("취소"))
         ])
     }
@@ -106,7 +106,10 @@ struct SelfAppendViewDirect: View {
                             }
                         }
                         .actionSheet(isPresented: $imageActionSheet, content: { cameraActionSheet })
-                        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) { ImagePicker(inputImage: self.$fooduiImage) }
+                        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                            ImagePicker(inputImage: self.$fooduiImage, sourceType: self.$sourceType)
+                            
+                        }
                         
                         Text("식자재 이름 : ")
                             .fontWeight(.semibold)
