@@ -103,7 +103,7 @@ struct SelfAppendViewNormal: View {
     }
     
     func appendSelectedFood() {
-        self.viewData.selectedFoodList.append(Selected(image: Image(self.viewData.food.foodname), foodname: self.viewData.food.foodname, foodType: self.viewData.food.foodType, expiration: self.expirationDate))
+        self.viewData.selectedFoodList.append(Selected(index: self.viewData.selectedFoodList.count, image: Image(self.viewData.food.foodname), foodname: self.viewData.food.foodname, foodType: self.viewData.food.foodType, expiration: self.expirationDate))
         
         print(self.viewData.selectedFoodList.count)
         

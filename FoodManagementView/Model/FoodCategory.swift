@@ -21,6 +21,7 @@ struct SelectedFood: Hashable {
 }
 
 struct Selected {
+    var index: Int
     var image: Image
     var foodname: String
     var foodType: String
@@ -30,7 +31,9 @@ struct Selected {
 class ViewData: ObservableObject {
     @Published var selectedFoodList: [Selected] = []
     @Published var food: SelectedFood = SelectedFood(foodType: "", foodname: "")
-    @Published var selectedMove = false
+    
+    @Published var selectedTouched = false
     @Published var selectedRow: Int?
     @Published var selectedCol: Int?
+    @Published var selectedFood: Selected?
 }

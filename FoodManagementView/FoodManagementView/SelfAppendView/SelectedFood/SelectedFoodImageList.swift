@@ -39,7 +39,9 @@ struct SelectedFoodImageList: View {
 }
 
 struct SelectedFoodImageList_Previews: PreviewProvider {
+    
     static var previews: some View {
         SelectedFoodImageList()
+            .environmentObject(ViewData())
     }
 }

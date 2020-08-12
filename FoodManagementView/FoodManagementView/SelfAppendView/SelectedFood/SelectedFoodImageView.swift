@@ -23,21 +23,12 @@ struct SelectedFoodImageView: View {
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
                 .shadow(color: .gray, radius: 1, x: 1, y: 1)
-                .offset(x: location.width, y: location.height)
-                .gesture(DragGesture()
-                    .onChanged { value in
-                        self.viewData.selectedMove = true
-                        self.location = value.translation
-                        
-                        print("width: \(self.location.width) height: \(self.location.height)")
-                    }
-                    .onEnded { value in
-                        self.viewData.selectedMove = false
-                        withAnimation {
-                            self.location = .zero
-                        }
-                    }
-            )
+                .onTapGesture {
+                    self.viewData.selectedTouched = true
+                    self.viewData.selectedFood = self.selected
+                    print("Hello!")
+            }
+                
             Text(selected.foodname)
         }
     }
@@ -45,6 +36,6 @@ struct SelectedFoodImageView: View {
 
 struct SelectedFoodImageView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedFoodImageView(selected: Selected(image: Image("사과"), foodname: "사과", foodType: "과일", expiration: Date()))
+        SelectedFoodImageView(selected: Selected(index: 0, image: Image("사과"), foodname: "사과", foodType: "과일", expiration: Date()))
     }
 }

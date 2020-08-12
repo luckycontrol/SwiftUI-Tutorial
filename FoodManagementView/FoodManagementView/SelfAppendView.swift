@@ -14,6 +14,8 @@ struct SelfAppendView: View {
     
     @State var normalAppend = false
     
+    @EnvironmentObject var viewData: ViewData
+    
     var body: some View {
         ZStack {
             
@@ -29,5 +31,6 @@ struct SelfAppendView: View {
 struct SelectCategoryView_Previews: PreviewProvider {
     static var previews: some View {
         SelfAppendView()
+            .environmentObject(ViewData())
     }
 }

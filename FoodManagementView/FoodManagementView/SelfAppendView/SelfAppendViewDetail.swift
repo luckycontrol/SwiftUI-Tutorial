@@ -80,5 +80,6 @@ struct SelfAppendViewDetail: View {
 struct SelfAppendViewDetail_Previews: PreviewProvider {
     static var previews: some View {
         SelfAppendViewDetail(directAppend: .constant(false), normalAppend: .constant(false))
+            .environmentObject(ViewData())
     }
 }

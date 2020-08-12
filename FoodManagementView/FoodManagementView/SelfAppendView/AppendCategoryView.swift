@@ -48,5 +48,6 @@ struct AppendCategoryView: View {
 struct AppendCategoryView_Previews: PreviewProvider {
     static var previews: some View {
         AppendCategoryView(directAppend: .constant(false))
+            .environmentObject(ViewData())
     }
 }
