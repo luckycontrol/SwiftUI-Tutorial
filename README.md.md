@@ -3,7 +3,8 @@
 ## UI Kit
 > UIHostingController
 
-[UIH
+[[UIHostingController 문서]]([https://developer.apple.com/documentation/swiftui/uihostingcontroller](https://developer.apple.com/documentation/swiftui/uihostingcontroller))
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NjA0MzM5XX0=
+eyJoaXN0b3J5IjpbLTEzOTE4NjQ1OTJdfQ==
 -->
