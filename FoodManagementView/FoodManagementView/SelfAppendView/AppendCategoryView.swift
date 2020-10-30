@@ -12,15 +12,22 @@ struct AppendCategoryView: View {
     
     @Binding var directAppend: Bool
     
+    @State var hovering = ""
+    
     var body: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(Color.gray.opacity(0.25))
+                
             
             SelectedFoodImageList()
+            
+            Text(hovering)
             
             HStack {
                 VStack {
                     Spacer()
-                    
+
                     Button(action: {
                         withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
                             self.directAppend = true
@@ -38,10 +45,10 @@ struct AppendCategoryView: View {
                 Spacer()
             }
         }
-        .frame(width: UIScreen.main.bounds.width, height: 350)
-        .background(Color.gray.opacity(0.15))
-        .cornerRadius(15)
-        .shadow(color: .gray, radius: 1, x: 1, y: 1)
+        .frame(height: UIScreen.main.bounds.height * 0.5)
+        .onHover { _ in
+            self.hovering = "Hover!"
+        }
     }
 }
 

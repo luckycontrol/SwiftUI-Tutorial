@@ -24,9 +24,10 @@ struct SelectedFoodImageView: View {
                 .clipShape(Circle())
                 .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 .onTapGesture {
-                    self.viewData.selectedTouched = true
+                    withAnimation {
+                        self.viewData.selectedTouched = true
+                    }
                     self.viewData.selectedFood = self.selected
-                    print("Hello!")
             }
                 
             Text(selected.foodname)

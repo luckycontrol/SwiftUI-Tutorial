@@ -16,7 +16,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var sourceType: UIImagePickerController.SourceType?
     
-    func makeCoordinator() -> Coordinator {
+    func makeCoordinator() -> Coordina
         Coordinator(self)
     }
     
@@ -25,7 +25,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         picker.delegate = context.coordinator
         picker.sourceType = sourceType!
         return picker
-    }
+    
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
         

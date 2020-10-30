@@ -17,6 +17,8 @@
 		5D6BE74B24C6A556009BAF6D /* SelfAppendViewNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6BE74A24C6A556009BAF6D /* SelfAppendViewNormal.swift */; };
 		5D6BE74D24C6A688009BAF6D /* SelfAppendViewDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6BE74C24C6A688009BAF6D /* SelfAppendViewDirect.swift */; };
 		5D6BE74F24C6B0F8009BAF6D /* SelfAppendViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6BE74E24C6B0F8009BAF6D /* SelfAppendViewDetail.swift */; };
+		5D76F7E324FFA1E900038CAD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76F7E124FFA1E900038CAD /* Data.swift */; };
+		5D76F7E524FFAB2E00038CAD /* SelfAppendDataSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D76F7E424FFAB2E00038CAD /* SelfAppendDataSet.json */; };
 		5D96CA0124BD8EBB004665DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0024BD8EBB004665DE /* AppDelegate.swift */; };
 		5D96CA0324BD8EBB004665DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0224BD8EBB004665DE /* SceneDelegate.swift */; };
 		5D96CA0624BD8EBB004665DE /* FoodManagementView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA0424BD8EBB004665DE /* FoodManagementView.xcdatamodeld */; };
@@ -25,8 +27,6 @@
 		5D96CA1024BD8EC0004665DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D96CA0E24BD8EC0004665DE /* LaunchScreen.storyboard */; };
 		5D96CA1B24BD8EC1004665DE /* FoodManagementViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA1A24BD8EC1004665DE /* FoodManagementViewTests.swift */; };
 		5D96CA2624BD8EC1004665DE /* FoodManagementViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA2524BD8EC1004665DE /* FoodManagementViewUITests.swift */; };
-		5D96CA3724BE045F004665DE /* SelfAppendDataSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D96CA3624BE045F004665DE /* SelfAppendDataSet.json */; };
-		5D96CA3924BE0481004665DE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3824BE0481004665DE /* Data.swift */; };
 		5D96CA3B24BE05DC004665DE /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3A24BE05DC004665DE /* FoodCategory.swift */; };
 		5D96CA3E24BE1C97004665DE /* SelfAppendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96CA3D24BE1C97004665DE /* SelfAppendView.swift */; };
 		5DA9D20E24D04DDF00465C40 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9D20D24D04DDF00465C40 /* MainView.swift */; };
@@ -64,6 +64,8 @@
 		5D6BE74A24C6A556009BAF6D /* SelfAppendViewNormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAppendViewNormal.swift; sourceTree = "<group>"; };
 		5D6BE74C24C6A688009BAF6D /* SelfAppendViewDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAppendViewDirect.swift; sourceTree = "<group>"; };
 		5D6BE74E24C6B0F8009BAF6D /* SelfAppendViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAppendViewDetail.swift; sourceTree = "<group>"; };
+		5D76F7E124FFA1E900038CAD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5D76F7E424FFAB2E00038CAD /* SelfAppendDataSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SelfAppendDataSet.json; path = ../../../../../SelfAppendDataSet.json; sourceTree = "<group>"; };
 		5D96C9FD24BD8EBB004665DE /* FoodManagementView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodManagementView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D96CA0024BD8EBB004665DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D96CA0224BD8EBB004665DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		5D96CA2124BD8EC1004665DE /* FoodManagementViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodManagementViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D96CA2524BD8EC1004665DE /* FoodManagementViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodManagementViewUITests.swift; sourceTree = "<group>"; };
 		5D96CA2724BD8EC1004665DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D96CA3624BE045F004665DE /* SelfAppendDataSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SelfAppendDataSet.json; path = ../../../../../../../../Desktop/SelfAppendDataSet.json; sourceTree = "<group>"; };
-		5D96CA3824BE0481004665DE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5D96CA3A24BE05DC004665DE /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		5D96CA3D24BE1C97004665DE /* SelfAppendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAppendView.swift; sourceTree = "<group>"; };
 		5DA9D20D24D04DDF00465C40 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -216,8 +216,8 @@
 		5D96CA3524BE0435004665DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D96CA3624BE045F004665DE /* SelfAppendDataSet.json */,
-				5D96CA3824BE0481004665DE /* Data.swift */,
+				5D76F7E424FFAB2E00038CAD /* SelfAppendDataSet.json */,
+				5D76F7E124FFA1E900038CAD /* Data.swift */,
 				5D96CA3A24BE05DC004665DE /* FoodCategory.swift */,
 				5DE49BF224CAC9D700F83403 /* ImagePicker.swift */,
 			);
@@ -339,7 +339,7 @@
 			files = (
 				5D96CA1024BD8EC0004665DE /* LaunchScreen.storyboard in Resources */,
 				5D96CA0D24BD8EC0004665DE /* Preview Assets.xcassets in Resources */,
-				5D96CA3724BE045F004665DE /* SelfAppendDataSet.json in Resources */,
+				5D76F7E524FFAB2E00038CAD /* SelfAppendDataSet.json in Resources */,
 				5D96CA0A24BD8EC0004665DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +372,7 @@
 				5D6BE74B24C6A556009BAF6D /* SelfAppendViewNormal.swift in Sources */,
 				5D569B6624BF497F008BE082 /* AppendCategoryView.swift in Sources */,
 				5D96CA0624BD8EBB004665DE /* FoodManagementView.xcdatamodeld in Sources */,
+				5D76F7E324FFA1E900038CAD /* Data.swift in Sources */,
 				5D96CA0124BD8EBB004665DE /* AppDelegate.swift in Sources */,
 				5DFE51A624E1FAFA0046CF18 /* RemoveSelectedView.swift in Sources */,
 				5D6BE74D24C6A688009BAF6D /* SelfAppendViewDirect.swift in Sources */,
@@ -383,7 +384,6 @@
 				5D5D322724C6DF8F002C7119 /* FoodTypeImageList.swift in Sources */,
 				5D96CA0324BD8EBB004665DE /* SceneDelegate.swift in Sources */,
 				5D5D326C24C8409C002C7119 /* SelectedFoodImageList.swift in Sources */,
-				5D96CA3924BE0481004665DE /* Data.swift in Sources */,
 				5D5D326A24C8408F002C7119 /* SelectedFoodImageView.swift in Sources */,
 				5D5D322424C6DB81002C7119 /* Direct_SelectCategory.swift in Sources */,
 			);

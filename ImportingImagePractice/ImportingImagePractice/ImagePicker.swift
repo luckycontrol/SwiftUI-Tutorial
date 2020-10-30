@@ -14,12 +14,15 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var uiImage: UIImage?
     
+    var sourceType: UIImagePickerController.SourceType
+    
     func makeCoordinator() -> Coordinate {
         Coordinate(self)
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
+        picker.sourceType = sourceType
         picker.delegate = context.coordinator
         return picker
     }

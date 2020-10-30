@@ -29,7 +29,16 @@ struct ContentView: View {
                 Text("Select Image")
             }
             .sheet(isPresented: $ImagePicking, onDismiss: loadImage) {
-                ImagePicker(uiImage: self.$uiImage)
+                ImagePicker(uiImage: self.$uiImage, sourceType: .photoLibrary)
+            }
+            
+            Button(action: {
+                self.ImagePicking = true
+            }) {
+                Text("Using Camera")
+            }
+            .sheet(isPresented: $ImagePicking, onDismiss: loadImage) {
+                ImagePicker(uiImage: self.$uiImage, sourceType: .camera)
             }
         }
     }

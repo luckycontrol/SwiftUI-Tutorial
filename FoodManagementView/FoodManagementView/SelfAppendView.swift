@@ -24,6 +24,8 @@ struct SelfAppendView: View {
             SelfAppendViewDirect(directAppend: $directAppend)
             
             SelfAppendViewNormal(normalAppend: $normalAppend)
+            
+            RemoveSelectedView()
         }
     }
 }

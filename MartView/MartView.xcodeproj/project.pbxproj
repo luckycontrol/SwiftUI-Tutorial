@@ -21,7 +21,6 @@
 		5D8DF43724AC3BCD008C5C9A /* Martfood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43624AC3BCD008C5C9A /* Martfood.swift */; };
 		5D8DF43A24AC4EFE008C5C9A /* Neuromorphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43924AC4EFE008C5C9A /* Neuromorphic.swift */; };
 		5D8DF43C24AC7056008C5C9A /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43B24AC7056008C5C9A /* FoodList.swift */; };
-		5D8DF43E24AD7629008C5C9A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DF43D24AD7629008C5C9A /* UserData.swift */; };
 		5D96C9EF24B853DC004665DE /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96C9EE24B853DC004665DE /* Menu.swift */; };
 		5D96C9F124BD3645004665DE /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96C9F024BD3645004665DE /* Test.swift */; };
 		5D96C9F324BD809B004665DE /* MartHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D96C9F224BD809B004665DE /* MartHome.swift */; };
@@ -65,7 +64,6 @@
 		5D8DF43624AC3BCD008C5C9A /* Martfood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Martfood.swift; sourceTree = "<group>"; };
 		5D8DF43924AC4EFE008C5C9A /* Neuromorphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuromorphic.swift; sourceTree = "<group>"; };
 		5D8DF43B24AC7056008C5C9A /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
-		5D8DF43D24AD7629008C5C9A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5D96C9EE24B853DC004665DE /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		5D96C9F024BD3645004665DE /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		5D96C9F224BD809B004665DE /* MartHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartHome.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				5D8DF42A24AC3442008C5C9A /* RefrigerData.json */,
-				5D8DF43D24AD7629008C5C9A /* UserData.swift */,
 				5D8DF43424AC3A9E008C5C9A /* Data.swift */,
 				5D8DF43624AC3BCD008C5C9A /* Martfood.swift */,
 			);
@@ -317,7 +314,6 @@
 				5D8DF3F524AC3371008C5C9A /* AppDelegate.swift in Sources */,
 				5D8DF43724AC3BCD008C5C9A /* Martfood.swift in Sources */,
 				5D8DF43524AC3A9E008C5C9A /* Data.swift in Sources */,
-				5D8DF43E24AD7629008C5C9A /* UserData.swift in Sources */,
 				5D96C9EF24B853DC004665DE /* Menu.swift in Sources */,
 				5D96C9F124BD3645004665DE /* Test.swift in Sources */,
 				5D96C9F324BD809B004665DE /* MartHome.swift in Sources */,

@@ -25,12 +25,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = SavedFoodImage(food: Selected(index: 0, image: Image("사과"), foodname: "사과", foodType: "과일", expiration: Date())).environmentObject(viewData)
+        let contentView = SelfAppendView().environmentObject(viewData)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)
+            if #available(iOS 13.0, *) {
+                window.overrideUserInterfaceStyle = .light
+            }
             self.window = window
             window.makeKeyAndVisible()
         }

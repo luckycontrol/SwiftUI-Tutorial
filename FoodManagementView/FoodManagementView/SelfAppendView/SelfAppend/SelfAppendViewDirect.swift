@@ -154,7 +154,7 @@ struct SelfAppendViewDirect: View {
         .offset(y: self.directAppend ? 0 : UIScreen.main.bounds.height)
     }
     
-    func loadImage() {
+    func loadImae() {
         guard let fooduiImage = fooduiImage else { return }
         foodImage = Image(uiImage: fooduiImage)
     }

@@ -105,7 +105,7 @@ struct SelfAppendViewNormal: View {
     func appendSelectedFood() {
         self.viewData.selectedFoodList.append(Selected(index: self.viewData.selectedFoodList.count, image: Image(self.viewData.food.foodname), foodname: self.viewData.food.foodname, foodType: self.viewData.food.foodType, expiration: self.expirationDate))
         
-        print(self.viewData.selectedFoodList.count)
+        print(self.viewData.selectedFoodList[0].index)
         
         self.viewData.selectedRow = self.viewData.selectedFoodList.count / 3
         self.viewData.selectedCol = self.viewData.selectedFoodList.count % 3
