@@ -14,6 +14,7 @@
 		69BFB393254C0F1F00BD4A13 /* OnBoardingScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFB392254C0F1F00BD4A13 /* OnBoardingScreenTests.swift */; };
 		69BFB39E254C0F1F00BD4A13 /* OnBoardingScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFB39D254C0F1F00BD4A13 /* OnBoardingScreenUITests.swift */; };
 		69BFB3AF254C0FD100BD4A13 /* OnBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFB3AE254C0FD100BD4A13 /* OnBoardScreen.swift */; };
+		69F780BC2561560B001D3ED0 /* SlidingPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F780BB2561560B001D3ED0 /* SlidingPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		69BFB39D254C0F1F00BD4A13 /* OnBoardingScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreenUITests.swift; sourceTree = "<group>"; };
 		69BFB39F254C0F1F00BD4A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BFB3AE254C0FD100BD4A13 /* OnBoardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardScreen.swift; sourceTree = "<group>"; };
+		69F780BB2561560B001D3ED0 /* SlidingPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				69BFB380254C0F1800BD4A13 /* OnBoardingScreenApp.swift */,
 				69BFB382254C0F1800BD4A13 /* ContentView.swift */,
 				69BFB3AE254C0FD100BD4A13 /* OnBoardScreen.swift */,
+				69F780BB2561560B001D3ED0 /* SlidingPractice.swift */,
 				69BFB384254C0F1E00BD4A13 /* Assets.xcassets */,
 				69BFB389254C0F1E00BD4A13 /* Info.plist */,
 				69BFB386254C0F1E00BD4A13 /* Preview Content */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69BFB383254C0F1800BD4A13 /* ContentView.swift in Sources */,
+				69F780BC2561560B001D3ED0 /* SlidingPractice.swift in Sources */,
 				69BFB381254C0F1800BD4A13 /* OnBoardingScreenApp.swift in Sources */,
 				69BFB3AF254C0FD100BD4A13 /* OnBoardScreen.swift in Sources */,
 			);

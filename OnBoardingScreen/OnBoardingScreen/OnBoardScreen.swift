@@ -20,7 +20,7 @@ struct OnBoardScreen: View {
             
             VStack {
                 
-                Spacer(minLength: 0)
+                Spacer()
                 
                 Text("CHECK YOUR MONEY")
                     .font(.largeTitle)
@@ -81,11 +81,6 @@ struct OnBoardScreen: View {
                 .frame(width: maxWidth, height: 65)
             }
         }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                NotificationCenter.default.post(name: NSNotification.Name("Success"), object: nil)
-            }
-        }
     }
     
     func calculateWidth() -> CGFloat {
@@ -103,7 +98,6 @@ struct OnBoardScreen: View {
     
     func onEnd(value: DragGesture.Value) {
         // BackOff Animation
-        
         withAnimation(Animation.easeOut(duration: 0.3)) {
             if offset > 180 {
                 offset = maxWidth - 65
