@@ -15,6 +15,8 @@
 		669EAE4A25F88B2900B61CE9 /* StepperPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAE4925F88B2900B61CE9 /* StepperPractice.swift */; };
 		669EAE5225F88C5500B61CE9 /* DatePickerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAE5125F88C5500B61CE9 /* DatePickerPractice.swift */; };
 		669EAE6225F8A49B00B61CE9 /* ListPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAE6125F8A49B00B61CE9 /* ListPractice.swift */; };
+		669EAE7025FF073900B61CE9 /* Project5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAE6F25FF073900B61CE9 /* Project5.swift */; };
+		669EAE7825FF0FC000B61CE9 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669EAE7725FF0FC000B61CE9 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		669EAE4925F88B2900B61CE9 /* StepperPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperPractice.swift; sourceTree = "<group>"; };
 		669EAE5125F88C5500B61CE9 /* DatePickerPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPractice.swift; sourceTree = "<group>"; };
 		669EAE6125F8A49B00B61CE9 /* ListPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPractice.swift; sourceTree = "<group>"; };
+		669EAE6F25FF073900B61CE9 /* Project5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project5.swift; sourceTree = "<group>"; };
+		669EAE7725FF0FC000B61CE9 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = ../../../../../../../../../Downloads/start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		669EAE1725F88A7C00B61CE9 /* MileStone3 */ = {
 			isa = PBXGroup;
 			children = (
+				669EAE7725FF0FC000B61CE9 /* start.txt */,
 				669EAE1825F88A7C00B61CE9 /* MileStone3App.swift */,
 				669EAE4925F88B2900B61CE9 /* StepperPractice.swift */,
 				669EAE5125F88C5500B61CE9 /* DatePickerPractice.swift */,
 				669EAE6125F8A49B00B61CE9 /* ListPractice.swift */,
+				669EAE6F25FF073900B61CE9 /* Project5.swift */,
 				669EAE1C25F88A7D00B61CE9 /* Assets.xcassets */,
 				669EAE2125F88A7D00B61CE9 /* Info.plist */,
 				669EAE1E25F88A7D00B61CE9 /* Preview Content */,
@@ -240,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				669EAE2025F88A7D00B61CE9 /* Preview Assets.xcassets in Resources */,
+				669EAE7825FF0FC000B61CE9 /* start.txt in Resources */,
 				669EAE1D25F88A7D00B61CE9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 			files = (
 				669EAE6225F8A49B00B61CE9 /* ListPractice.swift in Sources */,
 				669EAE5225F88C5500B61CE9 /* DatePickerPractice.swift in Sources */,
+				669EAE7025FF073900B61CE9 /* Project5.swift in Sources */,
 				669EAE4A25F88B2900B61CE9 /* StepperPractice.swift in Sources */,
 				669EAE1925F88A7C00B61CE9 /* MileStone3App.swift in Sources */,
 			);

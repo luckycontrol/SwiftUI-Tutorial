@@ -13,7 +13,8 @@ struct MileStone3App: App {
         WindowGroup {
 //            StepperPractice()
 //            DatePickerPractice()
-            ListPractice()
+//            ListPractice()
+            Project5()
         }
     }
 }
