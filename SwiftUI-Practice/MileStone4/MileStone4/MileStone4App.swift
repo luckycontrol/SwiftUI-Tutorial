@@ -17,7 +17,8 @@ struct MileStone4App: App {
 //            ControllAnimationStack()
 //            AnimatingGesture()
 //            AnimatingGesture2()
-            ShowAndHideTransition()
+//            ShowAndHideTransition()
+            MultiplicationTable()
         }
     }
 }

@@ -20,6 +20,11 @@
 		669EAEE225FFAFC500B61CE9 /* AnimatingGesture2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAEE125FFAFC500B61CE9 /* AnimatingGesture2.swift */; };
 		669EAEEA25FFBE6600B61CE9 /* ShowAndHideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAEE925FFBE6600B61CE9 /* ShowAndHideTransition.swift */; };
 		669EAEF225FFC05600B61CE9 /* BuildingCustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAEF125FFC05600B61CE9 /* BuildingCustomTransition.swift */; };
+		669EAEFE2601AC5200B61CE9 /* MultiplicationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAEFD2601AC5200B61CE9 /* MultiplicationTable.swift */; };
+		669EAF062601B61B00B61CE9 /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF052601B61B00B61CE9 /* Lobby.swift */; };
+		669EAF0B2601DE7700B61CE9 /* MenuDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */; };
+		669EAF102601F6F500B61CE9 /* GameReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF0F2601F6F500B61CE9 /* GameReady.swift */; };
+		669EAF1526022E8900B61CE9 /* GameStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF1426022E8900B61CE9 /* GameStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		669EAEE125FFAFC500B61CE9 /* AnimatingGesture2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGesture2.swift; sourceTree = "<group>"; };
 		669EAEE925FFBE6600B61CE9 /* ShowAndHideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAndHideTransition.swift; sourceTree = "<group>"; };
 		669EAEF125FFC05600B61CE9 /* BuildingCustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingCustomTransition.swift; sourceTree = "<group>"; };
+		669EAEFD2601AC5200B61CE9 /* MultiplicationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTable.swift; sourceTree = "<group>"; };
+		669EAF052601B61B00B61CE9 /* Lobby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lobby.swift; sourceTree = "<group>"; };
+		669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetail.swift; sourceTree = "<group>"; };
+		669EAF0F2601F6F500B61CE9 /* GameReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReady.swift; sourceTree = "<group>"; };
+		669EAF1426022E8900B61CE9 /* GameStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 				669EAEE125FFAFC500B61CE9 /* AnimatingGesture2.swift */,
 				669EAEE925FFBE6600B61CE9 /* ShowAndHideTransition.swift */,
 				669EAEF125FFC05600B61CE9 /* BuildingCustomTransition.swift */,
+				669EAEFC2601AC0200B61CE9 /* Challenge */,
 				669EAE8C25FF25BB00B61CE9 /* Assets.xcassets */,
 				669EAE9125FF25BB00B61CE9 /* Info.plist */,
 				669EAE8E25FF25BB00B61CE9 /* Preview Content */,
@@ -149,6 +160,18 @@
 				669EAEA725FF25BB00B61CE9 /* Info.plist */,
 			);
 			path = MileStone4UITests;
+			sourceTree = "<group>";
+		};
+		669EAEFC2601AC0200B61CE9 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				669EAEFD2601AC5200B61CE9 /* MultiplicationTable.swift */,
+				669EAF052601B61B00B61CE9 /* Lobby.swift */,
+				669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */,
+				669EAF0F2601F6F500B61CE9 /* GameReady.swift */,
+				669EAF1426022E8900B61CE9 /* GameStart.swift */,
+			);
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +305,17 @@
 			files = (
 				669EAEF225FFC05600B61CE9 /* BuildingCustomTransition.swift in Sources */,
 				669EAED225FF7BE400B61CE9 /* ControllAnimationStack.swift in Sources */,
+				669EAF1526022E8900B61CE9 /* GameStart.swift in Sources */,
 				669EAEC225FF761300B61CE9 /* AnimationBinding.swift in Sources */,
+				669EAF0B2601DE7700B61CE9 /* MenuDetail.swift in Sources */,
 				669EAEE225FFAFC500B61CE9 /* AnimatingGesture2.swift in Sources */,
 				669EAE8925FF25BA00B61CE9 /* MileStone4App.swift in Sources */,
 				669EAEBA25FF26E900B61CE9 /* ImplicitAnimation.swift in Sources */,
 				669EAEDA25FFACC400B61CE9 /* AnimatingGesture.swift in Sources */,
+				669EAF102601F6F500B61CE9 /* GameReady.swift in Sources */,
+				669EAF062601B61B00B61CE9 /* Lobby.swift in Sources */,
 				669EAECA25FF798800B61CE9 /* CreateImplicitAnimation.swift in Sources */,
+				669EAEFE2601AC5200B61CE9 /* MultiplicationTable.swift in Sources */,
 				669EAEEA25FFBE6600B61CE9 /* ShowAndHideTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
