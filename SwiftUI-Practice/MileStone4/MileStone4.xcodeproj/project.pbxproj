@@ -25,6 +25,7 @@
 		669EAF0B2601DE7700B61CE9 /* MenuDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */; };
 		669EAF102601F6F500B61CE9 /* GameReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF0F2601F6F500B61CE9 /* GameReady.swift */; };
 		669EAF1526022E8900B61CE9 /* GameStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF1426022E8900B61CE9 /* GameStart.swift */; };
+		669EAF252603830B00B61CE9 /* CorrectOrNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EAF242603830B00B61CE9 /* CorrectOrNot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetail.swift; sourceTree = "<group>"; };
 		669EAF0F2601F6F500B61CE9 /* GameReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReady.swift; sourceTree = "<group>"; };
 		669EAF1426022E8900B61CE9 /* GameStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStart.swift; sourceTree = "<group>"; };
+		669EAF242603830B00B61CE9 /* CorrectOrNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectOrNot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				669EAF0A2601DE7700B61CE9 /* MenuDetail.swift */,
 				669EAF0F2601F6F500B61CE9 /* GameReady.swift */,
 				669EAF1426022E8900B61CE9 /* GameStart.swift */,
+				669EAF242603830B00B61CE9 /* CorrectOrNot.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				669EAF0B2601DE7700B61CE9 /* MenuDetail.swift in Sources */,
 				669EAEE225FFAFC500B61CE9 /* AnimatingGesture2.swift in Sources */,
 				669EAE8925FF25BA00B61CE9 /* MileStone4App.swift in Sources */,
+				669EAF252603830B00B61CE9 /* CorrectOrNot.swift in Sources */,
 				669EAEBA25FF26E900B61CE9 /* ImplicitAnimation.swift in Sources */,
 				669EAEDA25FFACC400B61CE9 /* AnimatingGesture.swift in Sources */,
 				669EAF102601F6F500B61CE9 /* GameReady.swift in Sources */,
