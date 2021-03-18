@@ -15,12 +15,18 @@ struct GameReady: View {
     let problemCounts = [5, 10, 15, 20]
     @State private var selectedProblemCount = 0
     
+    @State private var leftProblemCount = 0
+    
     @State private var isStart = false
     
     @State private var timeRemaining = 3
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var nowScore = 0
+    
+    @State private var correctCount = 0
+    
+    @State private var wrongCount = 0
     
     @State private var number = Int.random(in: 1 ... 30)
     
@@ -88,7 +94,10 @@ struct GameReady: View {
                             HStack {
                                 ForEach(problemCounts, id: \.self) { count in
                                     Button(action: {
-                                        withAnimation { selectedProblemCount = count }
+                                        withAnimation {
+                                            selectedProblemCount = count
+                                            leftProblemCount = count
+                                        }
                                     }) {
                                         Text("\(count)")
                                             .font(.system(size: 25, weight: .bold))
@@ -143,60 +152,120 @@ struct GameReady: View {
                 }
                 
             }
-            .navigationTitle("게임준비")
+            .navigationBarTitle("게임준비")
         }
         else {
-            ZStack {
-                VStack {
-                    if timeRemaining > 0 {
-                        Text("\(timeRemaining)")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .onReceive(timer) { _ in
-                                if timeRemaining >= 0 { timeRemaining -= 1 }
+            if leftProblemCount > 0 {
+                ZStack {
+                    VStack {
+                        if timeRemaining > 0 {
+                            Text("\(timeRemaining)")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .onReceive(timer) { _ in
+                                    if timeRemaining >= 0 { timeRemaining -= 1 }
+                                }
+                        }
+                        
+                        else {
+                            VStack(spacing: 20) {
+                                Text("현재점수 : \(nowScore)")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                
+                                Text("남은 문제 : \(leftProblemCount)")
+                                    .fontWeight(.bold)
+                                
                             }
+                            .padding(.vertical, 50)
+                            
+                            VStack {
+                                Text("\(selectedDan) x \(number) = ?")
+                                    .font(.system(size: 25, weight: .bold))
+                                
+                                HStack {
+                                    VStack {
+                                        TextField("답을 입력하세요!", text: $inputNumber, onCommit: checkAnswer)
+                                            .font(.system(size: 25, weight: .bold))
+                                            .keyboardType(.numbersAndPunctuation)
+                                        
+                                        Rectangle()
+                                            .frame(height: 2)
+                                            .foregroundColor(.darkPink)
+                                            .padding(.vertical, 10)
+                                    }
+                                }
+                                .padding()
+                            }
+                            
+                            Spacer()
+                        }
                     }
                     
-                    else {
-                        Text("현재점수 : \(nowScore)")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .padding(.top, 50)
-                        
-                        Spacer()
-                        
-                        VStack {
-                            Text("\(selectedDan) x \(number) = ?")
-                                .font(.system(size: 25, weight: .bold))
-                            
-                            HStack {
-                                VStack {
-                                    TextField("답을 입력하세요!", text: $inputNumber, onCommit: checkAnswer)
-                                        .font(.system(size: 25, weight: .bold))
-                                    
-                                    Rectangle()
-                                        .frame(height: 2)
-                                        .foregroundColor(.darkPink)
-                                        .padding(.vertical, 10)
+                    if resultTimer != 0 {
+                        CorrectOrNot(resultText: resultText)
+                            .onReceive(timer) { _ in
+                                if resultTimer > 0 {
+                                    withAnimation {
+                                        resultTimer -= 1
+                                        
+                                        if resultTimer == 0 {
+                                            leftProblemCount -= 1
+                                            
+                                            number = Int.random(in: 1 ... 30)
+                                            
+                                            inputNumber = ""
+                                        }
+                                    }
                                 }
                             }
-                            .padding()
-                        }
-                        
-                        Spacer()
                     }
                 }
-                
-                if resultTimer != 0 {
-                    CorrectOrNot(resultText: resultText)
-                        .onReceive(timer) { _ in
-                            if resultTimer > 0 {
-                                withAnimation {
-                                    resultTimer -= 1
-                                }
-                            }
+                .navigationBarTitle("게임시작")
+            }
+            else {
+                VStack(spacing: 20) {
+                    Text("게임종료!")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    
+                    // 문제수
+                    Text("문제 수 : \(selectedProblemCount)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    // 정답 수
+                    Text("맞춘 문제 수 : \(correctCount)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    // 틀린 수
+                    Text("틀린 문제 수 : \(wrongCount)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                    
+                    // 돌아가기 버튼
+                    
+                    VStack(spacing: 20) {
+                        // 점수
+                        Text("최종 점수 : \(nowScore)")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        
+                        Button(action: {}) {
+                            Text("게임 종료!")
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity, maxHeight: 50)
+                                .background(Color("게임방법"))
+                                .clipShape(Capsule())
                         }
+                    }
                 }
+                .padding()
+                .navigationBarTitle("게임종료")
             }
         }
     }
@@ -212,9 +281,13 @@ struct GameReady: View {
         if user_answer == selectedDan * number {
             resultText = "정답입니다!"
             nowScore += 10
+            correctCount += 1
         } else {
             resultText = "정답이아니에요!"
+            wrongCount += 1
         }
+        
+        
         
         withAnimation {
             resultTimer = 2
