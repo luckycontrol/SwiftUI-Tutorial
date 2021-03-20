@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct iExpenseApp: App {
+    
+    @ObservedObject var expenses = Expenses()
+    
     var body: some Scene {
         WindowGroup {
 //            ContentView()
 //            Sheet()
 //            UsingOnDelete()
-            UserDefaultPractice()
+//            UserDefaultPractice()
+            ExpenseView(expenses: expenses)
+                .sheet(isPresented: $expenses.showingAddView) {
+                    AddView(expenses: expenses)
+                }
         }
     }
 }
