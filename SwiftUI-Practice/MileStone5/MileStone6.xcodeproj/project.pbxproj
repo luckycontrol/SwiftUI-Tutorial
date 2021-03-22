@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6675BF2726061BC2005FFF18 /* MileStone6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF2626061BC2005FFF18 /* MileStone6App.swift */; };
+		6675BF2B26061BC2005FFF18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF2A26061BC2005FFF18 /* Assets.xcassets */; };
+		6675BF2E26061BC2005FFF18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF2D26061BC2005FFF18 /* Preview Assets.xcassets */; };
+		6675BF3926061BC2005FFF18 /* MileStone6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF3826061BC2005FFF18 /* MileStone6Tests.swift */; };
+		6675BF4426061BC2005FFF18 /* MileStone6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF4326061BC2005FFF18 /* MileStone6UITests.swift */; };
+		6675BF5826061FD3005FFF18 /* GeometryReaderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */; };
+		6675BF6026077262005FFF18 /* ScrollViewWithScrollingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */; };
+		6675BF692607ABC3005FFF18 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF672607ABC3005FFF18 /* missions.json */; };
+		6675BF6A2607ABC3005FFF18 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF682607ABC3005FFF18 /* astronauts.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6675BF3526061BC2005FFF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6675BF1B26061BC1005FFF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6675BF2226061BC2005FFF18;
+			remoteInfo = MileStone6;
+		};
+		6675BF4026061BC2005FFF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6675BF1B26061BC1005FFF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6675BF2226061BC2005FFF18;
+			remoteInfo = MileStone6;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6675BF2326061BC2005FFF18 /* MileStone6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MileStone6.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6675BF2626061BC2005FFF18 /* MileStone6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone6App.swift; sourceTree = "<group>"; };
+		6675BF2A26061BC2005FFF18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6675BF2D26061BC2005FFF18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6675BF2F26061BC2005FFF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6675BF3426061BC2005FFF18 /* MileStone6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MileStone6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6675BF3826061BC2005FFF18 /* MileStone6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone6Tests.swift; sourceTree = "<group>"; };
+		6675BF3A26061BC2005FFF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6675BF3F26061BC2005FFF18 /* MileStone6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MileStone6UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6675BF4326061BC2005FFF18 /* MileStone6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone6UITests.swift; sourceTree = "<group>"; };
+		6675BF4526061BC2005FFF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPractice.swift; sourceTree = "<group>"; };
+		6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithScrollingData.swift; sourceTree = "<group>"; };
+		6675BF672607ABC3005FFF18 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missions.json; path = ../../../Downloads/missions.json; sourceTree = "<group>"; };
+		6675BF682607ABC3005FFF18 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = astronauts.json; path = ../../../Downloads/astronauts.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6675BF2026061BC2005FFF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3126061BC2005FFF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3C26061BC2005FFF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6675BF1A26061BC1005FFF18 = {
+			isa = PBXGroup;
+			children = (
+				6675BF2526061BC2005FFF18 /* MileStone6 */,
+				6675BF3726061BC2005FFF18 /* MileStone6Tests */,
+				6675BF4226061BC2005FFF18 /* MileStone6UITests */,
+				6675BF2426061BC2005FFF18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6675BF2426061BC2005FFF18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6675BF2326061BC2005FFF18 /* MileStone6.app */,
+				6675BF3426061BC2005FFF18 /* MileStone6Tests.xctest */,
+				6675BF3F26061BC2005FFF18 /* MileStone6UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6675BF2526061BC2005FFF18 /* MileStone6 */ = {
+			isa = PBXGroup;
+			children = (
+				6675BF682607ABC3005FFF18 /* astronauts.json */,
+				6675BF672607ABC3005FFF18 /* missions.json */,
+				6675BF2626061BC2005FFF18 /* MileStone6App.swift */,
+				6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */,
+				6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */,
+				6675BF2A26061BC2005FFF18 /* Assets.xcassets */,
+				6675BF2F26061BC2005FFF18 /* Info.plist */,
+				6675BF2C26061BC2005FFF18 /* Preview Content */,
+			);
+			path = MileStone6;
+			sourceTree = "<group>";
+		};
+		6675BF2C26061BC2005FFF18 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6675BF2D26061BC2005FFF18 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6675BF3726061BC2005FFF18 /* MileStone6Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6675BF3826061BC2005FFF18 /* MileStone6Tests.swift */,
+				6675BF3A26061BC2005FFF18 /* Info.plist */,
+			);
+			path = MileStone6Tests;
+			sourceTree = "<group>";
+		};
+		6675BF4226061BC2005FFF18 /* MileStone6UITests */ = {
+			isa = PBXGroup;
+			children = (
+				6675BF4326061BC2005FFF18 /* MileStone6UITests.swift */,
+				6675BF4526061BC2005FFF18 /* Info.plist */,
+			);
+			path = MileStone6UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6675BF2226061BC2005FFF18 /* MileStone6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6675BF4826061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6" */;
+			buildPhases = (
+				6675BF1F26061BC2005FFF18 /* Sources */,
+				6675BF2026061BC2005FFF18 /* Frameworks */,
+				6675BF2126061BC2005FFF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MileStone6;
+			productName = MileStone6;
+			productReference = 6675BF2326061BC2005FFF18 /* MileStone6.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6675BF3326061BC2005FFF18 /* MileStone6Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6675BF4B26061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6Tests" */;
+			buildPhases = (
+				6675BF3026061BC2005FFF18 /* Sources */,
+				6675BF3126061BC2005FFF18 /* Frameworks */,
+				6675BF3226061BC2005FFF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6675BF3626061BC2005FFF18 /* PBXTargetDependency */,
+			);
+			name = MileStone6Tests;
+			productName = MileStone6Tests;
+			productReference = 6675BF3426061BC2005FFF18 /* MileStone6Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6675BF3E26061BC2005FFF18 /* MileStone6UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6675BF4E26061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6UITests" */;
+			buildPhases = (
+				6675BF3B26061BC2005FFF18 /* Sources */,
+				6675BF3C26061BC2005FFF18 /* Frameworks */,
+				6675BF3D26061BC2005FFF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6675BF4126061BC2005FFF18 /* PBXTargetDependency */,
+			);
+			name = MileStone6UITests;
+			productName = MileStone6UITests;
+			productReference = 6675BF3F26061BC2005FFF18 /* MileStone6UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6675BF1B26061BC1005FFF18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6675BF2226061BC2005FFF18 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					6675BF3326061BC2005FFF18 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6675BF2226061BC2005FFF18;
+					};
+					6675BF3E26061BC2005FFF18 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6675BF2226061BC2005FFF18;
+					};
+				};
+			};
+			buildConfigurationList = 6675BF1E26061BC1005FFF18 /* Build configuration list for PBXProject "MileStone6" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6675BF1A26061BC1005FFF18;
+			productRefGroup = 6675BF2426061BC2005FFF18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6675BF2226061BC2005FFF18 /* MileStone6 */,
+				6675BF3326061BC2005FFF18 /* MileStone6Tests */,
+				6675BF3E26061BC2005FFF18 /* MileStone6UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6675BF2126061BC2005FFF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6675BF2E26061BC2005FFF18 /* Preview Assets.xcassets in Resources */,
+				6675BF692607ABC3005FFF18 /* missions.json in Resources */,
+				6675BF2B26061BC2005FFF18 /* Assets.xcassets in Resources */,
+				6675BF6A2607ABC3005FFF18 /* astronauts.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3226061BC2005FFF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3D26061BC2005FFF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6675BF1F26061BC2005FFF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6675BF2726061BC2005FFF18 /* MileStone6App.swift in Sources */,
+				6675BF5826061FD3005FFF18 /* GeometryReaderPractice.swift in Sources */,
+				6675BF6026077262005FFF18 /* ScrollViewWithScrollingData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3026061BC2005FFF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6675BF3926061BC2005FFF18 /* MileStone6Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6675BF3B26061BC2005FFF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6675BF4426061BC2005FFF18 /* MileStone6UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6675BF3626061BC2005FFF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6675BF2226061BC2005FFF18 /* MileStone6 */;
+			targetProxy = 6675BF3526061BC2005FFF18 /* PBXContainerItemProxy */;
+		};
+		6675BF4126061BC2005FFF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6675BF2226061BC2005FFF18 /* MileStone6 */;
+			targetProxy = 6675BF4026061BC2005FFF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6675BF4626061BC2005FFF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6675BF4726061BC2005FFF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6675BF4926061BC2005FFF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MileStone6/Preview Content\"";
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MileStone6/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6675BF4A26061BC2005FFF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MileStone6/Preview Content\"";
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MileStone6/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6675BF4C26061BC2005FFF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				INFOPLIST_FILE = MileStone6Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MileStone6.app/MileStone6";
+			};
+			name = Debug;
+		};
+		6675BF4D26061BC2005FFF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				INFOPLIST_FILE = MileStone6Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MileStone6.app/MileStone6";
+			};
+			name = Release;
+		};
+		6675BF4F26061BC2005FFF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				INFOPLIST_FILE = MileStone6UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MileStone6;
+			};
+			name = Debug;
+		};
+		6675BF5026061BC2005FFF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TC4W5JV38;
+				INFOPLIST_FILE = MileStone6UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cho.MileStone6UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MileStone6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6675BF1E26061BC1005FFF18 /* Build configuration list for PBXProject "MileStone6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675BF4626061BC2005FFF18 /* Debug */,
+				6675BF4726061BC2005FFF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6675BF4826061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675BF4926061BC2005FFF18 /* Debug */,
+				6675BF4A26061BC2005FFF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6675BF4B26061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675BF4C26061BC2005FFF18 /* Debug */,
+				6675BF4D26061BC2005FFF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6675BF4E26061BC2005FFF18 /* Build configuration list for PBXNativeTarget "MileStone6UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675BF4F26061BC2005FFF18 /* Debug */,
+				6675BF5026061BC2005FFF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6675BF1B26061BC1005FFF18 /* Project object */;
+}
