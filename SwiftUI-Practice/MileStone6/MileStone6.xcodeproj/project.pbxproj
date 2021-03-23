@@ -14,8 +14,9 @@
 		6675BF4426061BC2005FFF18 /* MileStone6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF4326061BC2005FFF18 /* MileStone6UITests.swift */; };
 		6675BF5826061FD3005FFF18 /* GeometryReaderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */; };
 		6675BF6026077262005FFF18 /* ScrollViewWithScrollingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */; };
-		6675BF692607ABC3005FFF18 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF672607ABC3005FFF18 /* missions.json */; };
-		6675BF6A2607ABC3005FFF18 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF682607ABC3005FFF18 /* astronauts.json */; };
+		6675BF732609D7EA005FFF18 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF712609D7EA005FFF18 /* astronauts.json */; };
+		6675BF742609D7EA005FFF18 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF722609D7EA005FFF18 /* missions.json */; };
+		6675BF792609D80C005FFF18 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF782609D80C005FFF18 /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,9 @@
 		6675BF4526061BC2005FFF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPractice.swift; sourceTree = "<group>"; };
 		6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithScrollingData.swift; sourceTree = "<group>"; };
-		6675BF672607ABC3005FFF18 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missions.json; path = ../../../Downloads/missions.json; sourceTree = "<group>"; };
-		6675BF682607ABC3005FFF18 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = astronauts.json; path = ../../../Downloads/astronauts.json; sourceTree = "<group>"; };
+		6675BF712609D7EA005FFF18 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = astronauts.json; path = ../../../../../../../../../Downloads/astronauts.json; sourceTree = "<group>"; };
+		6675BF722609D7EA005FFF18 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missions.json; path = ../../../../../../../../../Downloads/missions.json; sourceTree = "<group>"; };
+		6675BF782609D80C005FFF18 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 		6675BF2526061BC2005FFF18 /* MileStone6 */ = {
 			isa = PBXGroup;
 			children = (
-				6675BF682607ABC3005FFF18 /* astronauts.json */,
-				6675BF672607ABC3005FFF18 /* missions.json */,
+				6675BF712609D7EA005FFF18 /* astronauts.json */,
+				6675BF722609D7EA005FFF18 /* missions.json */,
 				6675BF2626061BC2005FFF18 /* MileStone6App.swift */,
 				6675BF5726061FD3005FFF18 /* GeometryReaderPractice.swift */,
 				6675BF5F26077262005FFF18 /* ScrollViewWithScrollingData.swift */,
+				6675BF782609D80C005FFF18 /* MissionView.swift */,
 				6675BF2A26061BC2005FFF18 /* Assets.xcassets */,
 				6675BF2F26061BC2005FFF18 /* Info.plist */,
 				6675BF2C26061BC2005FFF18 /* Preview Content */,
@@ -242,10 +245,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6675BF732609D7EA005FFF18 /* astronauts.json in Resources */,
 				6675BF2E26061BC2005FFF18 /* Preview Assets.xcassets in Resources */,
-				6675BF692607ABC3005FFF18 /* missions.json in Resources */,
+				6675BF742609D7EA005FFF18 /* missions.json in Resources */,
 				6675BF2B26061BC2005FFF18 /* Assets.xcassets in Resources */,
-				6675BF6A2607ABC3005FFF18 /* astronauts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6675BF2726061BC2005FFF18 /* MileStone6App.swift in Sources */,
+				6675BF792609D80C005FFF18 /* MissionView.swift in Sources */,
 				6675BF5826061FD3005FFF18 /* GeometryReaderPractice.swift in Sources */,
 				6675BF6026077262005FFF18 /* ScrollViewWithScrollingData.swift in Sources */,
 			);
