@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661AB946260B1E1D00192CF3 /* ImagePaintPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AB945260B1E1D00192CF3 /* ImagePaintPractice.swift */; };
+		661AB94E260B6A4B00192CF3 /* ColorCyclingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AB94D260B6A4B00192CF3 /* ColorCyclingCircle.swift */; };
+		661AB956260B6B9100192CF3 /* DrawingGroupPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AB955260B6B9100192CF3 /* DrawingGroupPractice.swift */; };
+		661AB95E260B72CC00192CF3 /* BlurBlendingAndMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AB95D260B72CC00192CF3 /* BlurBlendingAndMore.swift */; };
+		66472511260A2F0F009BB9A7 /* StrokeBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66472510260A2F0F009BB9A7 /* StrokeBorder.swift */; };
+		6647251E260B046C009BB9A7 /* CGAffineTransformPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647251D260B046C009BB9A7 /* CGAffineTransformPractice.swift */; };
 		6675BF8A2609DEB6005FFF18 /* MileStone7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675BF892609DEB6005FFF18 /* MileStone7App.swift */; };
 		6675BF8E2609DEB7005FFF18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF8D2609DEB7005FFF18 /* Assets.xcassets */; };
 		6675BF912609DEB7005FFF18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6675BF902609DEB7005FFF18 /* Preview Assets.xcassets */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		661AB945260B1E1D00192CF3 /* ImagePaintPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintPractice.swift; sourceTree = "<group>"; };
+		661AB94D260B6A4B00192CF3 /* ColorCyclingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircle.swift; sourceTree = "<group>"; };
+		661AB955260B6B9100192CF3 /* DrawingGroupPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGroupPractice.swift; sourceTree = "<group>"; };
+		661AB95D260B72CC00192CF3 /* BlurBlendingAndMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBlendingAndMore.swift; sourceTree = "<group>"; };
+		66472510260A2F0F009BB9A7 /* StrokeBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeBorder.swift; sourceTree = "<group>"; };
+		6647251D260B046C009BB9A7 /* CGAffineTransformPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformPractice.swift; sourceTree = "<group>"; };
 		6675BF862609DEB6005FFF18 /* MileStone7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MileStone7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6675BF892609DEB6005FFF18 /* MileStone7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileStone7App.swift; sourceTree = "<group>"; };
 		6675BF8D2609DEB7005FFF18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +112,12 @@
 				6675BF892609DEB6005FFF18 /* MileStone7App.swift */,
 				6675BFC52609F0B4005FFF18 /* CustomPath.swift */,
 				6675BFCD2609FDE2005FFF18 /* Shapes.swift */,
+				66472510260A2F0F009BB9A7 /* StrokeBorder.swift */,
+				6647251D260B046C009BB9A7 /* CGAffineTransformPractice.swift */,
+				661AB945260B1E1D00192CF3 /* ImagePaintPractice.swift */,
+				661AB955260B6B9100192CF3 /* DrawingGroupPractice.swift */,
+				661AB94D260B6A4B00192CF3 /* ColorCyclingCircle.swift */,
+				661AB95D260B72CC00192CF3 /* BlurBlendingAndMore.swift */,
 				6675BF8D2609DEB7005FFF18 /* Assets.xcassets */,
 				6675BF922609DEB7005FFF18 /* Info.plist */,
 				6675BF8F2609DEB7005FFF18 /* Preview Content */,
@@ -262,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6647251E260B046C009BB9A7 /* CGAffineTransformPractice.swift in Sources */,
+				661AB956260B6B9100192CF3 /* DrawingGroupPractice.swift in Sources */,
+				661AB95E260B72CC00192CF3 /* BlurBlendingAndMore.swift in Sources */,
+				661AB94E260B6A4B00192CF3 /* ColorCyclingCircle.swift in Sources */,
 				6675BF8A2609DEB6005FFF18 /* MileStone7App.swift in Sources */,
 				6675BFC62609F0B4005FFF18 /* CustomPath.swift in Sources */,
+				661AB946260B1E1D00192CF3 /* ImagePaintPractice.swift in Sources */,
 				6675BFCE2609FDE2005FFF18 /* Shapes.swift in Sources */,
+				66472511260A2F0F009BB9A7 /* StrokeBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
