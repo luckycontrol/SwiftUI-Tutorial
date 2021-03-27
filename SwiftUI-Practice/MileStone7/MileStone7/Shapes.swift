@@ -13,9 +13,13 @@ struct Shapes: View {
 //            .stroke(Color.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
 //            .frame(width: 300, height: 300)
         
-        Arc(startAngle: .degrees(0), endAngle: .degrees(90), clockwise: true)
-            .stroke(Color.blue, lineWidth: 10)
-            .frame(width: 300, height: 300)
+//        Arc(startAngle: .degrees(0), endAngle: .degrees(90), clockwise: true)
+//            .stroke(Color.blue, lineWidth: 10)
+//            .frame(width: 300, height: 300)
+        
+        Arrow()
+            .stroke(Color.pink, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+            
     }
 }
 
@@ -27,6 +31,23 @@ struct Triangle: Shape {
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        
+        return path
+    }
+}
+
+struct Arrow: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: rect.midX, y: rect.midY - 30))
+        path.addLine(to: CGPoint(x: rect.midX / 2, y: rect.midY - 30))
+        path.addLine(to: CGPoint(x: rect.midX / 2, y: rect.midY + 30))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.midY + 30))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.midY + 60))
+        path.addLine(to: CGPoint(x: rect.midX + rect.midX / 2, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.midY - 60))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.midY - 30))
         
         return path
     }

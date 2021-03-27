@@ -11,12 +11,13 @@ import SwiftUI
 struct MileStone7App: App {
     var body: some Scene {
         WindowGroup {
+            Shapes()
 //            StrokeBorder()
 //            CGAffineTransformPractice()
 //            ImagePaintPractice()
 //            ColorCyclingCircle()
 //            DrawingGroupPractice()
-            BlurBlendingAndMore()
+//            BlurBlendingAndMore()
         }
     }
 }
